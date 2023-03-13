@@ -1,0 +1,76 @@
+<div class="sub-landing app-blog">
+  <div class="section section-1">
+    <div class="section-container row padded">
+      <div class="blog-title">
+        <span class="text">{{ data.title }}</span>
+        <div class="stats">
+          <div class="">
+            <app-calendar-blank-svg [color]="gray"></app-calendar-blank-svg>
+            <span class="text-sm text-gray-400">{{ date }}</span>
+          </div>
+          <div class="">
+            <app-folder-open-svg [color]="gray"></app-folder-open-svg>
+            <span class="text-sm text-gray-400">{{ data.category }}</span>
+          </div>
+          <!-- <div class="">
+            <app-forum-comment-svg [color]="gray"></app-forum-comment-svg>
+            <span class="text-sm text-gray-400">{{ comments.length }}</span>
+          </div> -->
+        </div>
+      </div>
+
+      <span class="landing-image" [style.background-image]="image"></span>
+    </div>
+  </div>
+
+  <div class="section section-2">
+    <div class="section-container row padded">
+      <div class="blog-container">
+        <div class="blog-content" [innerHTML]="content"></div>
+
+        <!-- <div class="discussion">
+          <div class="section-title">DISCUSSION</div>
+          <div class="section-desc">{{ comments.length }} Comments</div>
+          <div class="flex flex-col gap-2">
+            <span class="text-xs text-white" *ngIf="!comments.length">Be the first to express your opinion!</span>
+            <app-comment-card *ngFor="let comment of comments" [data]="comment"></app-comment-card>
+          </div>
+        </div>
+
+        <div class="reply mb-10">
+          <div class="section-title">LEAVE A REPLY</div>
+          <div class="mt-2">
+            <app-reply-form></app-reply-form>
+          </div>
+        </div> -->
+      </div>
+
+      <div class="flex-col hidden gap-5 lg:flex">
+        <!-- <div class="text-sm">
+          <mat-form-field appearance="outline" class="w-full -mb-5">
+            <mat-label class="text-white">Search blog post</mat-label>
+            <input #search matInput (change)="filter(true, search.value)" />
+
+            <mat-icon matSuffix class="text-gray-400">search</mat-icon>
+          </mat-form-field>
+        </div> -->
+
+        <div class="">
+          <div class="section-title">POPULAR POSTS</div>
+
+          <div class="flex flex-col gap-4 mt-4">
+            <app-popular-card *ngFor="let popular of popularData" [data]="popular"></app-popular-card>
+          </div>
+        </div>
+
+        <!-- <div class="">
+          <div class="section-title">CATEGORIES</div>
+
+          <div class="flex flex-col gap-2 mt-4">
+            <app-list-item *ngFor="let cat of categories" [data]="cat" (click)="filter(false, cat)"></app-list-item>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>

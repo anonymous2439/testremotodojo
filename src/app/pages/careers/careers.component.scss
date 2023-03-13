@@ -1,0 +1,118 @@
+.careers-section-subtitle {
+  @apply text-primary2;
+  @apply text-lg;
+  @apply font-semibold;
+}
+
+.careers-section-title {
+  @apply text-black;
+  @apply text-3xl md:text-5xl;
+  @apply font-bold;
+}
+
+.careers-section-title-v2 {
+  @apply text-primary2;
+  @apply text-3xl md:text-5xl;
+  @apply font-bold;
+}
+
+.careers-section-desc {
+  @apply text-base;
+  @apply font-normal;
+  @apply leading-relaxed;
+  @apply text-black;
+}
+
+.section-1 {
+  .landing {
+    @apply flex flex-col;
+  }
+}
+
+.section-2 {
+  @apply py-10 lg:py-40;
+
+  .section-container {
+    .section-content {
+      @apply text-black;
+
+      .benefits-wrap {
+        @apply py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-14 gap-y-10 items-center;
+
+        .benefits-card {
+          @apply text-center space-y-4 bg-primary2 text-white rounded-lg px-4 py-8;
+          min-height: 300px;
+          height: 100%;
+        }
+      }
+    }
+
+    .benefits-container {
+      @apply flex;
+      @apply flex-col;
+      @apply sm:flex-row;
+      @apply sm:flex-wrap;
+      @apply gap-4 justify-center;
+
+      app-benefits-card {
+        @media (min-width: 640px) {
+          width: 236px;
+        }
+      }
+    }
+
+    .hiring_process {
+      @apply flex flex-col items-center text-center;
+
+      span {
+            max-width: 750px;
+      }
+      span:first-child {
+        @apply text-primary font-extrabold;
+       
+      }
+    }
+  }
+}
+
+.section-3 {
+  @apply py-20 lg:py-40;
+
+  .categories-container {
+    @apply flex justify-center items-center gap-1 md:gap-10 lg:gap-20 overflow-auto py-4;
+    .category {
+      // @apply flex flex-row  py-2 px-4 border-b-2 border-transparent;
+      @apply flex overflow-auto;
+
+      button {
+        @apply w-max;
+        @apply py-2 px-4 border-b-2 border-transparent;
+        @apply text-black font-semibold;
+
+        &.active {
+          @apply text-primary border-primary font-semibold;
+        }
+
+        div {
+          width: inherit;
+        }
+      }
+    }
+  }
+
+  .positions-container {
+    @apply grid;
+    @apply grid-cols-1;
+    @apply gap-4;
+
+    @apply sm:grid-cols-2;
+    @apply md:grid-cols-3;
+
+    .position-content {
+      &.hidden {
+        width: 0;
+        overflow: hidden;
+      }
+    }
+  }
+}

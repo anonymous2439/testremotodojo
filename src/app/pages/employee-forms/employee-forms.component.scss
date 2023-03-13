@@ -1,0 +1,261 @@
+.privacy {
+  .header {
+    @apply relative;
+    @apply flex;
+    @apply justify-center;
+
+    & > div {
+      @apply absolute;
+      @apply top-0;
+      @apply flex;
+      @apply items-center;
+
+      @apply w-full;
+      @apply h-full;
+      @apply px-5;
+
+      @apply lg:px-4;
+
+      max-width: 1024px;
+
+      & > span {
+        @apply font-bold;
+        @apply text-white;
+        @apply text-xl;
+
+        font-family: "Poppins";
+      }
+    }
+  }
+
+  .section-container {
+    @apply flex;
+    @apply flex-col;
+    @apply items-start;
+
+    @apply md:flex-row;
+  }
+
+  @apply h-full;
+
+  .content {
+    @apply inline-grid;
+    @apply gap-5;
+    @apply pb-10;
+    @apply md:pl-5;
+    font-family: "Rubik";
+
+    .title {
+      @apply font-bold;
+      @apply mb-2;
+      @apply text-gray-800;
+      @apply text-base;
+    }
+
+    p {
+      @apply text-gray-600;
+      @apply text-sm;
+      @apply leading-loose;
+      @apply whitespace-pre-line;
+    }
+
+    li {
+      margin-left: 15px;
+    }
+
+    img {
+      @apply w-full;
+      @apply rounded;
+      @apply mb-5;
+
+      &.right {
+        @apply md:w-2/3;
+        @apply md:float-right;
+        @apply md:ml-5;
+      }
+
+      &.left {
+        @apply md:w-2/3;
+        @apply md:float-left;
+        @apply md:mr-5;
+      }
+    }
+
+    a {
+      @apply no-underline;
+      @apply text-primary;
+    }
+
+    .conclusion {
+      @apply rounded-xl;
+      @apply shadow-xl;
+      @apply overflow-hidden;
+      @apply flex;
+      @apply w-full;
+      @apply mt-10;
+
+      & > .indicator {
+        @apply bg-primary;
+        @apply w-2;
+        @apply flex-none;
+      }
+
+      & > .content {
+        @apply p-6;
+
+        & > p {
+          @apply m-0;
+        }
+      }
+    }
+  }
+
+  .employee-forms-container {
+    @apply py-20;
+    @apply w-full;
+
+    h1 {
+      @apply text-center;
+      @apply mb-10;
+      @apply uppercase;
+      @apply font-bold;
+      @apply text-xl;
+    }
+
+    label {
+      @apply text-xl;
+      @apply pr-2;
+    }
+
+    input {
+      @apply text-xl;
+      @apply border-b-2;
+    }
+
+    div {
+      @apply pb-2;
+    }
+
+    textarea {
+      @apply border;
+      @apply w-full;
+      box-sizing: border-box;
+    }
+
+    span {
+      @apply text-xl;
+    }
+
+    .form-div {
+      @apply border;
+      @apply rounded-md;
+      @apply p-8;
+
+      .first-section {
+        @apply grid;
+        @apply grid-cols-2;
+      }
+
+      .third-section {
+        @apply flex;
+        @apply justify-between;
+      }
+    }
+  }
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+}
+
+#options label {
+  margin: 0 0 0 0.2rem;
+}
+
+.radioOption {
+  margin: 0 0 0.2rem 0;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+label {
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.nameInput {
+  display: flex;
+  flex-direction: column;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  pointer-events: all;
+  background-color: slategrey;
+}
+
+#ratingLabel {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+#ratingValue {
+  font-weight: bolder;
+  font-size: large;
+  border: 0.1rem solid lightgray;
+  padding: 0.4rem 0.6rem 0.1rem 0.6rem;
+  margin: 0;
+  vertical-align: middle;
+  border-radius: 0.3rem;
+}
+
+.error {
+  color: darkred;
+  background-color: lightsalmon;
+  border: 0.1rem solid crimson;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  text-align: center;
+  margin: 0 0 1rem 0;
+  display: flex;
+  width: inherit;
+}
+
+.error p {
+  margin: 0;
+  flex-grow: 1;
+}
+
+textarea,
+input {
+  margin: 0.1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
+  font-size: medium;
+  font-weight: lighter;
+}
+
+.close {
+  cursor: default;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+  #options {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .nameInput {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

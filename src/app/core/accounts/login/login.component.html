@@ -1,0 +1,66 @@
+<div class="section first-section accounts-first-section">
+  <div class="section-1-wrapper">
+    <div class="section-container section-1 space-y-6">
+      <div class="account-title">Login</div>
+      <div class="account-subtitle">Gain More</div>
+      <div class="account-desc">
+        If you already have the creds then don't wait more and avail all our premium content.
+      </div>
+    </div>
+  </div>
+
+  <div class="section-2-wrapper">
+    <div class="section-container section-2 padded">
+      <div class="section-content">
+        <div class="login-container">
+          <div class="login-form-container">
+            <div class="form-title">
+              <span>Login</span>
+            </div>
+            <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <mat-form-field appearance="outline" class="w-full">
+                <mat-label class="text-base">Email Address</mat-label>
+                <input class="text-base" matInput formControlName="email" type="email">
+
+                <mat-error>Email address is required.</mat-error>
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="w-full">
+                <mat-label class="text-base">Password</mat-label>
+                <input class="text-base" matInput formControlName="password"
+                  [type]="hidePassword ? 'password' : 'text'">
+                <mat-icon matSuffix (click)="hidePassword = !hidePassword">
+                  {{ hidePassword ? 'visibility_off' : 'visibility' }}
+                </mat-icon>
+
+                <mat-error>Password is required.</mat-error>
+              </mat-form-field>
+
+              <mat-checkbox color="primary" class="text-xs" formControlName="keepSignedIn">
+                Keep me signed in
+              </mat-checkbox>
+
+              <div class="form-btn">
+                <app-button [isSubmit]="true" [isDisabled]="loginForm.invalid" [isResponsive]="true"></app-button>
+              </div>
+            </form>
+          </div>
+
+          <div class="register-container">
+            <div class="register-content">
+              <div class="register-title">
+                <span>Hey there!</span>
+              </div>
+              <div class="register-tell-us">
+                <p>Tell us about your project and start your journey with us!</p>
+              </div>
+              <div class="register-btn">
+                <app-button type="primary" text="GET YOUR ACCESS" [isResponsive]="true"
+                  [routerLink]="routers.Accounts + routers.Register"></app-button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,113 @@
+.contact-section-subtitle {
+  @apply text-primary2;
+  @apply text-lg;
+  @apply font-semibold;
+}
+
+.contact-section-subtitle-v2 {
+  @apply text-white;
+  @apply text-lg;
+  @apply font-semibold;
+}
+
+.contact-section-title {
+  @apply text-black;
+  @apply text-3xl md:text-4xl;
+  @apply font-bold;
+}
+
+.contact-section-title-v2 {
+  @apply text-white;
+  @apply text-2xl md:text-4xl;
+  @apply font-bold;
+}
+
+.contact-section-desc {
+  @apply text-base;
+  @apply font-normal;
+  @apply leading-relaxed;
+  @apply text-black;
+}
+
+.contact-section-desc-v2 {
+  @apply text-base;
+  @apply font-normal;
+  @apply leading-relaxed;
+  @apply text-white;
+}
+
+.contact {
+  @apply bg-white;
+  .section-1-wrapper {
+    .section-container {
+      @apply py-10;
+
+      @media (min-width: 1220px) {
+        @apply pt-4;
+      }
+
+      @media (min-width: 1310px) {
+        @apply pt-8;
+      }
+
+      @media (min-width: 1400px) {
+        @apply pt-12;
+      }
+
+      @media (min-width: 1490px) {
+        @apply pt-16;
+      }
+
+      @media (min-width: 1580px) {
+        @apply pt-20;
+      }
+
+      @media (min-width: 1670px) {
+        @apply pt-24;
+      }
+
+      @media (min-width: 1800px) {
+        @apply pt-32;
+      }
+
+      .desc {
+        @apply text-white;
+
+        @media (min-width: 1024px) {
+          width: 30rem;
+        }
+      }
+    }
+  }
+}
+
+.contact-2nd-section {
+  @apply bg-primary2;
+  @apply px-4 sm:px-0;
+  .contact-2nd-section-inner-wrapper {
+    @apply max-w-screen-xl mx-auto;
+    @apply py-14 sm:py-20;
+    @apply px-4;
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-6;
+  }
+}
+
+.form {
+  @apply flex;
+  @apply flex-col;
+  @apply gap-2;
+  @apply bg-white;
+  @apply rounded-md;
+  @apply shadow-xl;
+  @apply text-sm;
+  @apply w-full;
+  @apply p-5;
+
+  @apply sm:p-10;
+
+  button {
+    @media (max-width: 767px) {
+      @apply w-full;
+    }
+  }
+}

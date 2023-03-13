@@ -1,0 +1,66 @@
+.paginator {
+  @apply text-white;
+  @apply text-sm;
+
+  .desktop {
+    @apply hidden;
+    @apply justify-center;
+    @apply items-center;
+    @apply gap-5;
+
+    @apply lg:flex;
+
+    button {
+      @apply rounded-full;
+      @apply h-8;
+      @apply w-8;
+      @apply flex;
+      @apply justify-center;
+      @apply items-center;
+      @apply text-black;
+
+      &.active {
+        @apply bg-primary;
+        @apply text-white;
+      }
+
+      &.disabled {
+        @apply pointer-events-none;
+        @apply text-gray-800;
+      }
+
+      &:not(.active):hover {
+        @apply bg-primary;
+        @apply bg-opacity-10;
+      }
+    }
+  }
+
+  .mobile {
+    @apply flex flex-row gap-x-8;
+    @apply text-xs;
+    @apply lg:hidden;
+
+    button {
+      @apply text-white;
+      @apply bg-primary;
+      @apply py-4 px-8;
+      @apply rounded-lg;
+      @apply h-11;
+
+      &.disabled {
+        @apply pointer-events-none;
+        @apply bg-primary-disabled;
+        @apply text-gray-400;
+      }
+    }
+
+    mat-form-field {
+      @apply text-center;
+
+      &::ng-deep.mat-form-field-wrapper {
+        padding-bottom: 0px !important;
+      }
+    }
+  }
+}

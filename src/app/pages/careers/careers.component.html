@@ -1,0 +1,77 @@
+<div class="section first-section section-1">
+  <div class="max-w-screen-xl mx-auto py-20 lg:py-40">
+    <div class="w-4/5 mx-auto space-y-4 lg:space-y-6 text-center">
+      <div class="careers-section-subtitle">
+        {{ careersSections[0].title }}
+      </div>
+      <div class="text-3xl lg:text-6xl font-bold">
+        <h1>{{ careersSections[0].description1 }}
+          <span class="text-primary text-3xl lg:text-6xl">
+            {{ careersSections[0].description2 }}
+          </span>
+        </h1>
+      </div>
+      <div class="careers-section-desc">
+        {{ careersSections[0].text}}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Perks &  Benefits section START -->
+<div class="section section-2" [id]="fragment.benefits">
+  <div class="section-container padded">
+    <div class="section-content">
+      <div class="message-container message-container-right">
+        <div class="text-left">
+          <h3><span class="text-black section-title">{{careersSections[1]?.title}}</span></h3>
+          <h2>
+            <p class="section-desc">{{careersSections[1]?.description}}</p>
+          </h2>
+        </div>
+      </div>
+      <div class="benefits-wrap">
+        <div class="benefits-card" *ngFor="let benefit of benefits">
+          <img class="w-1/4 mx-auto" [src]="benefit.icon">
+          <div class="font-semibold text-lg">{{ benefit.name }}</div>
+          <div class="text-base">{{ benefit.description }}</div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="hiring_process">
+        <span>{{ careersSections[1].text1 }}</span>
+        <span class="text-black">{{ careersSections[1].text2 }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Perks &  Benefits section END -->
+
+<!-- Open Positions section START -->
+<div class="section section-3" [id]="fragment.openPositions">
+  <div class="section-container padded">
+    <div class="section-title">
+      <h3>{{careersSections[2]?.title}}</h3>
+    </div>
+    <div class="flex flex-col justify-items-center">
+      <div>
+        <div class="categories-container">
+          <div class="category">
+            <!-- <div class="category" > -->
+            <button *ngFor="let category of positionCategories" [ngClass]="{'active' : activeCategory == category?.id}"
+              (click)="setActiveFilter(category.id)">
+              <div>
+                {{category.name}} ({{category.count}})
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="positions-container">
+        <div class="position-content" *ngFor="let position of allPositions"
+          [ngClass]="{ 'hidden' : position.category !== activeCategory}">
+          <app-position-card [position]="position"></app-position-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Open Positions section END -->

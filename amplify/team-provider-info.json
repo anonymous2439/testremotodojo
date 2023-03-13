@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-remotodojosystem-dev-100338-authRole",
+      "UnauthRoleArn": "arn:aws:iam::611712574723:role/amplify-remotodojosystem-dev-100338-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::611712574723:role/amplify-remotodojosystem-dev-100338-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-remotodojosystem-dev-100338-deployment",
+      "UnauthRoleName": "amplify-remotodojosystem-dev-100338-unauthRole",
+      "StackName": "amplify-remotodojosystem-dev-100338",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:611712574723:stack/amplify-remotodojosystem-dev-100338/4322e180-53dd-11ec-b307-0a8341eccfec",
+      "AmplifyAppId": "d80n0guegxyok"
+    },
+    "categories": {
+      "auth": {
+        "remotodojosystem1aa0d2da": {}
+      }
+    }
+  }
+}

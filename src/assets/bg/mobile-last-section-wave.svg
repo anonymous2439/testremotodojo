@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390.101" height="263.98" viewBox="0 0 390.101 263.98">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="-0.449" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1a4bb7"/>
+      <stop offset="1" stop-color="#212429"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <path id="Path_320" data-name="Path 320" d="M-22530-20015.895h-390v-77.436s58.428-19.951,138.277-10.52,102.086,12.369,158.176,10.52,93.547-10.52,93.547-10.52Z" transform="translate(22920 20106.383)" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="Contact_Us_bg" data-name="Contact Us bg" transform="translate(0.076 -4245.065)">
+    <path id="Path_119" data-name="Path 119" d="M390,4279.589s-69.819-15.348-116.217-16.062S127.8,4292.081,82.119,4287.441A318.221,318.221,0,0,1,0,4267.454v69.955H390Z" transform="translate(0 -14.303)" fill="rgba(26,75,183,0.1)"/>
+    <path id="Path_120" data-name="Path 120" d="M0,4247.163s43.2-6.671,94.595,7.249,62.46,24.27,133.486,9.636S310.051,4247.273,390,4251.2" fill="none" stroke="#e2e2e2" stroke-width="1"/>
+    <path id="Path_118" data-name="Path 118" d="M-22530-19855.895h-390v-237.436s58.428-19.951,138.277-10.52,102.086,12.369,158.176,10.52,93.547-10.52,93.547-10.52Z" transform="translate(22920 24364.939)" fill="url(#linear-gradient)"/>
+    <g id="Mask_Group_14" data-name="Mask Group 14" transform="translate(0 4258.557)" clip-path="url(#clip-path)" style="mix-blend-mode: overlay;isolation: isolate">
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="32.5" cy="32.5" r="32.5" transform="translate(19 -8.535)" fill="#fff" opacity="0.5" style="mix-blend-mode: overlay;isolation: isolate"/>
+    </g>
+    <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(341 4305.022)" fill="none" stroke="#fff" stroke-width="2" opacity="0.5" style="mix-blend-mode: overlay;isolation: isolate">
+      <circle cx="18" cy="18" r="18" stroke="none"/>
+      <circle cx="18" cy="18" r="17" fill="none"/>
+    </g>
+    <circle id="Ellipse_3" data-name="Ellipse 3" cx="6.5" cy="6.5" r="6.5" transform="translate(337 4305.022)" fill="#fff" opacity="0.5" style="mix-blend-mode: overlay;isolation: isolate"/>
+  </g>
+</svg>

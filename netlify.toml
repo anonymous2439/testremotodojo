@@ -1,0 +1,11 @@
+# Settings in the [build] context are global and are applied to all contexts unless otherwise overriden by more specific contexts.
+
+[build]
+    publish = "dist/remotodojo-webapp"
+    command = "ng build --prod"
+
+# HOME
+[[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200

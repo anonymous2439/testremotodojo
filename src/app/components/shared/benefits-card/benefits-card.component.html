@@ -1,0 +1,34 @@
+<div class="benefit-card">
+
+  <!-- Overlay START -->
+  <div class="overlay-content">
+    <div class="statistics" *ngIf="benefit.count">
+      <span class="description">{{benefit.description}}</span>
+    </div>
+    <div class="benefit" *ngIf="!benefit.count">
+      <span class="name">{{benefit.name}}</span>
+      <span class="description">{{benefit.description}}</span>
+    </div>
+  </div>
+  <!-- Overlay END -->
+
+  <!-- Statistics content START -->
+  <div class="type-statistics" *ngIf="benefit.count">
+    <div class="card-txt">
+      <p class="count">{{benefit.count}}</p>
+      <p class="name">{{benefit.name}}</p>
+    </div>
+    <img [src]="benefit.icon" alt="">
+  </div>
+  <!-- Statistics content END -->
+
+  <!-- Benefits content START -->
+  <div class="type-benefit" *ngIf="!benefit.count">
+    <div>
+      <img [src]="benefit.icon" alt="">
+      <span>{{benefit.name}}</span>
+    </div>
+  </div>
+  <!-- Benefits content END -->
+
+</div>

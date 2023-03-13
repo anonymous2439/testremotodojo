@@ -1,0 +1,78 @@
+<div class="sub-landing">
+
+  <div class="section section-1">
+    <div class="section-container row responsive padded">
+      <button class="close-btn" [routerLink]="routers.Careers" [fragment]="careersFragment.openPositions">
+        <img src="./../../../../assets/icons/plus.svg">
+      </button>
+
+      <div class="flex flex-col justify-between">
+        <div class="flex flex-col items-center gap-2 lg:items-start">
+          <span class="landing-title">{{ getPositionCategory(data.category) }}</span>
+          <span class="section-desc">{{ data.title }}</span>
+          <div class="text-sm text-gray-700">
+            <div>{{ data.timeStatus }} | {{ setLocations(data.locations) }}</div>
+            <div>{{ data.shift.in }} - {{ data.shift.out }} Schedule</div>
+          </div>
+        </div>
+        <div class="spacer-2"></div>
+        <app-button text="APPLY NOW" class="hidden lg:block"
+          [routerLink]="routers.Careers + routers.Application + '/' + data.id" [fragment]="applyCareerFragment.form">
+        </app-button>
+      </div>
+
+      <div class="landing-graph">
+        <p>
+          {{ data.descriptions.desc}}
+        </p>
+        <br />
+        <p>
+          {{ data.descriptions.desc2 }}
+        </p>
+      </div>
+
+      <app-button text="APPLY NOW" class="lg:hidden" [isResponsive]="true"
+        [routerLink]="routers.Careers + routers.Application + '/' + data.id" [fragment]="applyCareerFragment.form">
+      </app-button>
+    </div>
+  </div>
+
+  <div class="section section-2 mt-10">
+    <div class="section-container col padded">
+      <span class="section-title">WHAT YOU'LL DO</span>
+      <div class="flex flex-col gap-2 pt-5 lg:px-5">
+        <app-list-item *ngFor="let resp of data.descriptions.responsibilities" [data]="resp" [clickable]="false"
+          textSize="sm">
+        </app-list-item>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-3 mt-10">
+    <div class="section-container col padded">
+      <span class="section-title">WHAT WE'RE LOOKING FOR</span>
+      <div class="flex flex-col gap-2 pt-5 lg:px-5">
+        <app-list-item *ngFor="let resp of data.descriptions.qualifications" [data]="resp" [clickable]="false"
+          textSize="sm">
+        </app-list-item>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-4 mt-10">
+    <div class="gap-4 section-container col padded">
+      <span class="section-title">COVID 19 HIRING PROCESS</span>
+      <span class="text-sm leading-loose text-black">
+        RemotoDojo remains fully compliant with all present COVID-19 restrictions and is open to hosting online
+        interviews.
+        Additionally, we require any applicant arriving on-site to still comply with proper health protocols.
+        We have ensured that a majority of our staff are either fully vaccinated or still follow proper safety
+        guidelines.
+        <br><br>
+        Please beware of recent scams to online job seekers. Those applying to our job openings will only be contacted
+        directly from @cognitiv.com and @remotodojo.com email accounts. If you have any questions of the authenticity of
+        a RemotoDojo job offer, please contact recruiting@remotodojo.com before giving away any information.
+      </span>
+    </div>
+  </div>
+</div>

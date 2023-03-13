@@ -1,0 +1,85 @@
+<div id="footer-section" class="footer section">
+  <div class="footer-inner-section">
+    <div class="section-container grid grid-cols-1 lg:grid-cols-2 padded">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-12">
+        <div class="flex flex-col gap-2 w-60 space-y-3">
+          <div class="w-40">
+            <img src="./../../../assets/logos/dojo-logo-v3-white-text.svg" class="w-full" />
+          </div>
+          <p class="text-base text-gray-300 font-semibold">
+            <a href="mailto:sales@remotodojo.com">
+              sales@remotodojo.com
+            </a>
+          </p>
+          <div class="footer-social-icons">
+            <span>
+              <img src="../../../../assets/icons/facebook-v3.svg" (click)="facebook()" alt="Facebook">
+            </span>
+            <span>
+              <img src="../../../../assets/icons/linkedin-v4.svg" (click)="linkedin()" alt="LinkedIn">
+            </span>
+            <span>
+              <img src="../../../../assets/icons/youtube-v3.svg" (click)="youtube()" alt="Youtube">
+            </span>
+            <span>
+              <img src="../../../../assets/icons/twitter-v3.svg" (click)="twitter()" alt="Twitter">
+            </span>
+            <span>
+              <img src="../../../../assets/icons/instagram-v3.svg" (click)="instagram()" alt="Instagram">
+            </span>
+            <span>
+              <img src="../../../../assets/icons/tiktok-v3.svg" (click)="tiktok()" alt="Tiktok">
+            </span>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <span class="text-base text-primary2 font-semibold">Contact Numbers</span>
+          <div class="flex gap-4 text-gray-300">
+            <div class="flex flex-col text-base font-semibold">
+              <span><a href="tel:+61411069447">+61 411 069 447 (AU)</a></span>
+              <span><a href="tel:+16505074870">+1 (650) 507 4870 (USA)</a></span>
+              <span><a href="tel:+442030342160">+44 2030 342160 (UK)</a></span>
+              <span><a href="tel:+639204743207">+63 920 474 3207 (PH)</a></span>
+              <span><a href="tel:+0323445835">(032) 344-5835 (PH Landline)</a></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <span class="text-base text-primary2 font-semibold">PH Address</span>
+          <div class="flex gap-4 text-gray-300">
+            <span class="text-base font-semibold">SBPO Bldg., Hernan Cortes, <br />Mandaue City, Cebu, PH 6014</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <span class="text-base text-primary2 font-semibold">USA Address</span>
+          <div class="flex gap-4 text-gray-300">
+            <span class="text-base font-semibold">442 5th Avenue #1495, <br />
+              Manhattan NY 10018</span>
+          </div>
+        </div>
+      </div>
+      <!-- START OF CONTACT AND MAP SECTION -->
+      <div class="contact-and-map-wrapper">
+        <div class="contact-and-map-container">
+          <div class="contact-and-map-gmap">
+            <div class="map-outer">
+              <div class="gmap-canvas"><iframe class="gmap-iframe" width="100%" frameborder="0" scrolling="no"
+                  marginheight="0" marginwidth="0"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15699.745892721849!2d123.9269557!3d10.3469648!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5d98bffff7203bd4!2sRemotoDojo%20Inc.!5e0!3m2!1sen!2sph!4v1666945460155!5m2!1sen!2sph"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF CONTACT AND MAP SECTION -->
+    </div>
+  </div>
+  <div class="section-container py-8 px-4">
+    <div class="text-white">© RemotoDojo Inc. 2022</div>
+  </div>
+</div>
+
+<!-- <app-alert-popup *ngIf="showSuccessAlert" [data]="successAlert" (close)="closeAlertPopup()"></app-alert-popup> -->

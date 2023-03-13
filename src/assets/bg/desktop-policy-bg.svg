@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="252.256" viewBox="0 0 1920 252.256">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#212429"/>
+      <stop offset="1" stop-color="#1a4bb7"/>
+    </linearGradient>
+  </defs>
+  <path id="privacy_policy_header_bg" data-name="privacy policy header bg" d="M0,120H1920V347.973s-233.042,28.6-544.107,23.725-362.427-25.525-714.666-34.17S0,371.7,0,371.7Z" transform="translate(0 -120)" fill="url(#linear-gradient)"/>
+</svg>

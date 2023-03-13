@@ -1,0 +1,257 @@
+.business-section-subtitle {
+  @apply text-primary2;
+  @apply text-lg;
+  @apply font-semibold;
+}
+
+.business-section-subtitle-v2 {
+  @apply text-white;
+  @apply text-lg;
+  @apply font-semibold;
+}
+
+.business-section-title {
+  @apply text-black;
+  @apply text-3xl md:text-4xl;
+  @apply font-bold;
+}
+
+.business-section-title-v2 {
+  @apply text-white;
+  @apply text-3xl md:text-4xl;
+  @apply font-bold;
+}
+
+.business-section-desc {
+  @apply text-base;
+  @apply font-normal;
+  @apply leading-relaxed;
+  @apply text-black;
+}
+
+.responsive-width {
+  @media (min-width: 1024px) {
+    width: 30rem;
+  }
+}
+
+.section-1 {
+  .landing {
+    @apply flex;
+    @apply flex-col;
+
+    .landing-desc {
+      @apply text-white;
+    }
+
+    button {
+      @apply w-fit;
+      @apply mt-5;
+    }
+  }
+
+  .landing-graphic {
+    @extend .responsive-width;
+  }
+}
+
+.section-2 {
+  @apply py-20;
+  @apply bg-white;
+
+  .grow-business-graphic {
+    @apply relative;
+
+    @extend .responsive-width;
+
+    .items {
+      @apply absolute;
+      @apply grid;
+      @apply grid-cols-3;
+      @apply gap-2;
+      @apply w-full;
+      @apply -top-2;
+      @apply rounded-xl;
+      @apply p-2;
+
+      & > button {
+        @apply py-3;
+        @apply text-xs;
+        @apply font-semibold;
+        @apply text-gray-700;
+        @apply bg-transparent;
+        @apply shadow-xl;
+        @apply rounded-xl;
+        @apply h-fit;
+        @apply transform;
+        @apply duration-300;
+        @apply hover:bg-primary;
+        @apply hover:text-white;
+        @apply hover:border-primary;
+        @apply sm:text-sm;
+
+        &.connections-btn {
+        }
+
+        &.funding-btn {
+        }
+
+        &.mentoring-btn {
+        }
+      }
+    }
+
+    .graphic {
+      @apply flex;
+      @apply justify-center;
+      @apply mt-14;
+
+      & > div {
+        @apply relative;
+        @apply overflow-hidden;
+        @apply w-full;
+        @apply h-full;
+
+        .overlay-desc {
+          @apply absolute;
+          @apply text-center;
+          @apply font-bold;
+          @apply w-full;
+          @apply h-full;
+          @apply bg-accents;
+          @apply opacity-0;
+          @apply transform;
+          @apply duration-300;
+          @apply text-white;
+          @apply p-10;
+          @apply flex;
+          @apply items-center;
+
+          & > span {
+            @apply h-fit;
+          }
+
+          &.show {
+            @apply opacity-95;
+          }
+        }
+      }
+    }
+  }
+
+  .grow-business-desc {
+    @extend .responsive-width;
+    @apply space-y-6;
+
+    .section-desc {
+      @apply text-white;
+      @apply text-3xl;
+      @apply lg:text-5xl;
+    }
+
+    .section-content {
+      @apply text-white;
+      @apply text-base;
+      @apply leading-loose;
+      @apply tracking-wide;
+      @apply font-light;
+    }
+  }
+}
+
+.business-angel-wrapper {
+  background-image: url("../../../assets/banners/contact-us-business-angels-v2.png");
+  background-position: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #f8f9fc;
+  @apply py-20;
+
+  .text {
+    @apply text-xl;
+    @apply font-medium;
+    @apply leading-relaxed;
+    @apply tracking-normal;
+  }
+
+  .business-angel-container {
+    @apply max-w-screen-xl mx-auto;
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-10;
+    @apply items-center;
+    @apply px-4;
+
+    .feature-img {
+      @apply justify-self-center;
+    }
+  }
+}
+
+.advantages-bg {
+  @apply relative;
+
+  @apply bg-primary2;
+
+  .advantages-desc {
+    @apply w-full;
+
+    @extend .responsive-width;
+  }
+
+  .advantages-list {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-x-4;
+    @apply flex-col;
+    @apply w-full;
+  }
+
+  .advantages-wave {
+    z-index: -1;
+
+    @apply w-full;
+    @apply absolute;
+  }
+}
+
+.section-4 {
+  @apply bg-primary2;
+  @apply py-10 lg:py-40;
+
+  .section-desc {
+    @apply text-white;
+    @apply text-3xl;
+    @apply lg:text-5xl;
+  }
+}
+
+.section-5 {
+  @apply bg-white;
+  @apply py-10 lg:py-40;
+
+  .get-in-touch-form {
+    @apply p-5;
+    @apply bg-white;
+    @apply shadow-xl;
+    @apply h-fit;
+    @apply text-sm;
+    @apply flex;
+    @apply flex-col;
+    @apply gap-2;
+    @apply rounded-xl;
+    @apply mx-4 sm:mx-0;
+
+    @apply sm:p-10;
+
+    button {
+      @apply w-full;
+      @apply sm:w-fit;
+    }
+  }
+
+  .get-in-touch-graphic {
+    @apply space-y-10;
+    @apply px-4 sm:px-0;
+
+    img {
+      @apply w-4/5 sm:w-full;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.benefit-card {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(182,202,239,0.5);
+    border-right: 2px #1A4BB7 solid;
+    border-bottom: 6px #1A4BB7 solid;
+    border-top: 6px #1A4BB7 solid;
+  }
+
+  @apply shadow-xl rounded-lg bg-white relative overflow-hidden align-middle;
+  min-height: 150px;
+
+  &:hover {
+    .overlay-content {
+      @apply bottom-0;
+    }
+  }
+
+  .type-statistics {
+    @apply flex items-center w-full justify-around;
+    height: 150px;
+
+    img {
+      height: 40px;
+    }
+
+    .card-txt {
+      @apply text-center;
+      :nth-child(1) {
+        @apply text-primary text-2xl font-extrabold;
+      }
+    }
+  }
+
+  .type-benefit {
+    @apply flex items-center uppercase font-extrabold justify-center;
+    height: 150px;
+    div {
+      @apply flex flex-col items-center gap-4;
+      img {
+        @apply h-10;
+      }
+    }
+  }
+
+  .overlay-content {
+    @apply bg-primary absolute w-full h-full left-0 text-white;
+    @apply -bottom-full;
+    @apply transform duration-1000;
+    @apply flex flex-col items-center overflow-y-auto;
+
+    .statistics,
+    .benefit {
+      .name {
+        @apply uppercase font-extrabold;
+      }
+
+      .description {
+        @apply text-sm;
+      }
+    }
+    .statistics {
+      @apply flex items-center;
+      @apply p-4;
+    }
+
+    .benefit {
+      @apply p-6;
+      @apply flex flex-col items-center gap-1;
+    }
+  }
+}

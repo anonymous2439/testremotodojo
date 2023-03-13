@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30">
+	<title>icons8-macos-maximize-30</title>
+	<defs>
+		<image  width="24" height="24" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAAXNSR0IB2cksfwAAAIpQTFRFAAAAImb/I2f/I2j/I2j/Imn/I2j/I2r/Jmj/I2f/I2j/I2j/I2j/I2j/IGj/I2n/I2j/I2j/JGn/Imf/I2j/JGT/9fX1J2z/JGf/I2j/JGn/I2n/I2j/I2j/I2f/JGj/Imj/I2j/Imn/I2j/I2j/H2b/I2n/JGf/Imj/JG3/I2j/I2j/I2j/JGf/WTiEGwAAAC50Uk5TAB5tuNj0bB0bmfz//aogUPPyTm9uHP8anptrt7Xb2ddp+5yY8RlJTUwVkaK2av5lpjgAAACuSURBVHicdZLbAoIgEEQ3r+VSiYmVWWpp9/7/91JBRV3ncQ4MCwOA1MIwLdu2TMcFXcuVh0psven9rY+aeND6O4YDsVCtH/kVafaILieKurR9BQ44BXis5vQo4AkIkQIYw4kGCZxpYAGXlq5mrnlwoaPS+cMdGmTgkhfMBcCVAre6JD4FRVk/770PU2IPWUg4LspoKwy47hfPvvTXO++Wf8rBPxHxN/X9NPkJZfwBlLEaGm+MLfMAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="3" y="3"/>
+</svg>

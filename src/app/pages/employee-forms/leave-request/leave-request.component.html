@@ -1,0 +1,187 @@
+<form [formGroup]="leaveRequestForm" name="leave-request" (submit)="leaveRequest($event)">
+  <h1>Leave Request</h1>
+  <div class=" w-2/5">
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>Date</mat-label>
+      <input matInput formControlName="date" type="date" name="date">
+      <mat-error>Date is required.</mat-error>
+    </mat-form-field>
+  </div>
+  <div class="first-section">
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Employee Name</mat-label>
+        <input matInput formControlName="employeeName" type="name" name="employeeName">
+        <mat-error>Employee Name is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Employee ID</mat-label>
+        <input matInput formControlName="employeeId" type="name" name="employeeId">
+        <mat-error>Employee ID is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Department</mat-label>
+        <input matInput formControlName="department" type="text" name="department">
+        <mat-error>Department is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Designation</mat-label>
+        <input matInput formControlName="designation" type="text" name="designation">
+        <mat-error>Designation is required.</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>Employment Status</mat-label>
+      <input matInput formControlName="employmentStatus" type="text" name="employmentStatus">
+      <mat-error>Employment Status is required.</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <h1 class="text-center">Leave Request Reasons</h1>
+    <div class="grid grid-cols-3">
+      <div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" name="leaveRequestReasons" id="personal" value="Personal" />
+          <label for="personal">Personal</label>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" name="leaveRequestReasons" id="Sick" value="Sick" />
+          <label for="Sick">Sick</label>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" name="leaveRequestReasons" id="Vacation" value="Vacation" />
+          <label for="Vacation">Vacation</label>
+        </div>
+      </div>
+      <div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" name="leaveRequestReasons" id="Bereavement" value="Bereavement" />
+          <label for="Bereavement">Bereavement</label>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" name="leaveRequestReasons" id="Maternity" value="Maternity" />
+          <label for="Maternity">Maternity</label>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" name="leaveRequestReasons" id="Parental" value="Parental" />
+          <label for="Parental">Parental</label>
+        </div>
+      </div>
+      <div>
+        <div class="flex items-center space-x-2">
+          <p><strong>Status</strong></p>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" name="leaveRequestReasons" id="Paid" value="Paid" />
+          <label for="Paid">Paid</label>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" name="leaveRequestReasons" id="Unpaid" value="Unpaid" />
+          <label for="Unpaid">Unpaid (no leave credits)</label>
+        </div>
+      </div>
+      <div class="col-span-3">
+        <div class="flex items-center space-x-2">
+          <input type="radio" name="leaveRequestReasons" id="Unpaid" value="Unpaid" />
+          <label for="Unpaid">Other: </label>
+          <input type="text" name="leaveRequestReasons" id="Unpaid" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-5 gap-10 items-center justify-items-center box-border">
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>Start Date</mat-label>
+      <input matInput formControlName="startDate" type="date" name="startDate">
+      <mat-error>Start Date is required.</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>End Date</mat-label>
+      <input matInput formControlName="endDate" type="date" name="endDate">
+      <mat-error>End Date is required.</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>Total Days</mat-label>
+      <input matInput formControlName="totalDays" type="text" name="totalDays">
+      <mat-error>Total Days is required.</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>Resuming Date</mat-label>
+      <input matInput formControlName="resumingDate" type="date" name="resumingDate">
+      <mat-error>Resuming Date is required.</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>Remarks</mat-label>
+      <input matInput formControlName="remarks" type="text" name="remarks">
+      <mat-error>Remarks is required.</mat-error>
+    </mat-form-field>
+  </div>
+  <div class="first-section">
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Employee's Signature</mat-label>
+        <input matInput formControlName="employeesSignature" type="text" name="employeesSignature">
+        <mat-error>Employee's Signature is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Immediate Head's Approval</mat-label>
+        <input matInput formControlName="immediateHeadsApproval" type="text" name="immediateHeadsApproval">
+        <mat-error>Immediate Head's Signature is required.</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Comments</mat-label>
+      <textarea formControlName="comments" name="comments" matInput></textarea>
+    </mat-form-field>
+  </div>
+  <div class="flex justify-between">
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Signature</mat-label>
+        <input matInput formControlName="signature" type="text" name="signature">
+        <mat-error>Signature is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Received By</mat-label>
+        <input matInput formControlName="receivedBy" type="text" name="receivedBy">
+        <mat-error>Received By is required.</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="flex justify-between">
+    <div>
+      <p>
+        ENDORSED BY:
+      </p>
+      <p>
+        <span class="font-bold underline">LEON FEDRO</span> <br />
+        CEO/President
+      </p>
+    </div>
+    <div class="text-right">
+      <p>
+        NOTED BY:
+      </p>
+      <p>
+        <span class="font-bold underline">LINDSAY CLARK</span> <br />
+        CFO/Vice-President
+      </p>
+    </div>
+  </div>
+  <app-button [isSubmit]="true" [isResponsive]="true" class="w-full" [isDisabled]="leaveRequestForm.invalid">
+  </app-button>
+</form>

@@ -1,0 +1,15 @@
+.reply {
+  @apply flex;
+  @apply flex-col;
+  @apply gap-3;
+  @apply text-sm;
+
+  &::ng-deep.mat-checkbox-layout {
+    @apply whitespace-normal;
+  }
+  
+  button {
+    @apply w-full;
+    @apply sm:w-fit;
+  }
+}

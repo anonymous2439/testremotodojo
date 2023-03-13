@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="443" height="443" viewBox="0 0 443 443">
+  <defs>
+    <filter id="Ellipse_9" x="0" y="0" width="443" height="443" filterUnits="userSpaceOnUse">
+      <feOffset dy="15" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#1a4bb7" flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <path id="Path_296" data-name="Path 296" d="M0,0H195V215L0,195Z" transform="translate(1287 2439)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Path_297" data-name="Path 297" d="M0,0,195,20V195H0Z" transform="translate(1287 2634)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <path id="Path_298" data-name="Path 298" d="M0,275H195V80L0,0Z" transform="translate(1092 2554)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <path id="Path_299" data-name="Path 299" d="M0,0H195V195L0,115Z" transform="translate(1092 2439)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="donut" transform="translate(-1066 -2427.5)">
+    <g transform="matrix(1, 0, 0, 1, 1066, 2427.5)" filter="url(#Ellipse_9)">
+      <path id="Ellipse_9-2" data-name="Ellipse 9" d="M189,100a89,89,0,1,0,89,89,89.1,89.1,0,0,0-89-89M189,0C293.382,0,378,84.618,378,189S293.382,378,189,378,0,293.382,0,189,84.618,0,189,0Z" transform="translate(32.5 17.5)" fill="#e2e2e2" stroke="#fff" stroke-width="5"/>
+    </g>
+    <g id="Digital_Marketing_Agencies" data-name="Digital Marketing Agencies" transform="translate(1287 2439)">
+      <g id="Mask_Group_7" data-name="Mask Group 7" transform="translate(-1287 -2439)" clip-path="url(#clip-path)">
+        <g id="Ellipse_10" data-name="Ellipse 10" transform="translate(1100 2447)" fill="none" stroke="#5b84bf" stroke-width="96">
+          <circle cx="187" cy="187" r="187" stroke="none"/>
+          <circle cx="187" cy="187" r="139" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_110" data-name="Group 110" transform="translate(136.914 160.379)" opacity="0">
+        <path id="Union_1" data-name="Union 1" d="M21935,21771.117a5,5,0,0,1-5-5v-4.5l-9-5.5,9-5.5v-4.5a5,5,0,0,1,5-5h51a5,5,0,0,1,5,5v20a5,5,0,0,1-5,5Z" transform="translate(-21922.914 -21789.998)" fill="#212429"/>
+        <text id="_26_" data-name="26%" transform="translate(38 -29.881)" fill="#fff" font-size="12" font-family="Raleway-Regular, Raleway"><tspan x="-11.706" y="0">26%</tspan></text>
+      </g>
+    </g>
+    <g id="E-commerce_agencies" data-name="E-commerce agencies" transform="translate(1287 2634)">
+      <g id="Mask_Group_8" data-name="Mask Group 8" transform="translate(-1287 -2634)" clip-path="url(#clip-path-2)">
+        <g id="Ellipse_11" data-name="Ellipse 11" transform="translate(1100 2447)" fill="none" stroke="#84abe8" stroke-width="96">
+          <circle cx="187" cy="187" r="187" stroke="none"/>
+          <circle cx="187" cy="187" r="139" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_109" data-name="Group 109" transform="translate(136.914 105.379)" opacity="0">
+        <path id="Union_1-2" data-name="Union 1" d="M21935,21771.117a5,5,0,0,1-5-5v-4.5l-9-5.5,9-5.5v-4.5a5,5,0,0,1,5-5h51a5,5,0,0,1,5,5v20a5,5,0,0,1-5,5Z" transform="translate(-21922.914 -21789.998)" fill="#212429"/>
+        <text id="_24_" data-name="24%" transform="translate(38 -29.881)" fill="#fff" font-size="12" font-family="Raleway-Regular, Raleway"><tspan x="-11.754" y="0">24%</tspan></text>
+      </g>
+    </g>
+    <g id="Software_Houses" data-name="Software Houses" transform="translate(1074.002 2554)">
+      <g id="Mask_Group_9" data-name="Mask Group 9" transform="translate(-1074.002 -2554)" clip-path="url(#clip-path-3)">
+        <g id="Ellipse_12" data-name="Ellipse 12" transform="translate(1100 2447)" fill="none" stroke="#acc6f8" stroke-width="96">
+          <circle cx="187" cy="187" r="187" stroke="none"/>
+          <circle cx="187" cy="187" r="139" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_108" data-name="Group 108" transform="translate(-7.088 169.379)" opacity="0">
+        <path id="Union_1-3" data-name="Union 1" d="M21935,21771.121a5,5,0,0,1-5-5v-20a5,5,0,0,1,5-5h51a5,5,0,0,1,5,5v20a5,5,0,0,1-5,5Zm56-20.5,9,5.5-9,5.5Z" transform="translate(-21922.914 -21789.998)" fill="#212429"/>
+        <text id="_35_" data-name="35%" transform="translate(38 -29.881)" fill="#fff" font-size="12" font-family="Raleway-Regular, Raleway"><tspan x="-11.736" y="0">35%</tspan></text>
+      </g>
+    </g>
+    <g id="IT_Recruitment_companies" data-name="IT Recruitment companies" transform="translate(1092 2439)">
+      <g id="Mask_Group_10" data-name="Mask Group 10" transform="translate(-1092 -2439)" clip-path="url(#clip-path-4)">
+        <g id="Ellipse_13" data-name="Ellipse 13" transform="translate(1100 2447)" fill="none" stroke="#ccdcff" stroke-width="96">
+          <circle cx="187" cy="187" r="187" stroke="none"/>
+          <circle cx="187" cy="187" r="139" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_36" data-name="Group 36" transform="translate(-5.085 121.378)" opacity="0">
+        <path id="Union_1-4" data-name="Union 1" d="M21935,21771.121a5,5,0,0,1-5-5v-20a5,5,0,0,1,5-5h51a5,5,0,0,1,5,5v20a5,5,0,0,1-5,5Zm56-20.5,9,5.5-9,5.5Z" transform="translate(-21922.914 -21789.998)" fill="#212429"/>
+        <text id="_15_" data-name="15%" transform="translate(38 -29.881)" fill="#fff" font-size="12" font-family="Raleway-Regular, Raleway"><tspan x="-10.698" y="0">15%</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

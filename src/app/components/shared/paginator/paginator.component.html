@@ -1,0 +1,37 @@
+<div class="paginator">
+
+  <div class="desktop">
+    <button [class.disabled]="isFirst()" (click)="selectPage(false)">
+      <fa-icon [icon]="faChevronLeft"></fa-icon>
+    </button>
+
+    <button (click)="selectPage(0)" [class.disabled]="isFirst()" *ngIf="pages().length > 3">
+      <fa-icon [icon]="faAngleDoubleLeft"></fa-icon>
+    </button>
+
+    <span *ngIf="showStartEllipses()">. . .</span>
+
+    <button *ngFor="let page of displayedPages(); index as i" [class.active]="(page ?? i) === currPage"
+      (click)="selectPage((page ?? i))">
+      {{ (page ?? i) + 1 }}
+    </button>
+
+    <span *ngIf="showEndEllipses()">. . .</span>
+
+    <button (click)="selectPage(pages().length -1)" [class.disabled]="isLast()" *ngIf="pages().length > 3">
+      <fa-icon [icon]="faAngleDoubleRight"></fa-icon>
+    </button>
+
+    <button [class.disabled]="isLast()" (click)="selectPage(true)">
+      <fa-icon [icon]="faChevronRight"></fa-icon>
+    </button>
+  </div>
+
+  <div class="mobile">
+    <button [class.disabled]="isFirst()" (click)="selectPage(false)">PREVIOUS</button>
+
+
+    <button [class.disabled]="isLast()" (click)="selectPage(true)">NEXT</button>
+  </div>
+
+</div>

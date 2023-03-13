@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "remotodojosystem",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authremotodojosystem1aa0d2da",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

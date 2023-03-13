@@ -1,0 +1,16 @@
+<div class="alert-popup dj-overlay dark normal-opacity trans-effect">
+  <div class="alert-container">
+    <div class="alert-close">
+      <button (click)="closeAlert()">
+        <fa-icon [icon]="faClose"></fa-icon>
+      </button>
+    </div>
+
+    <div class="alert-icon">
+      <img [src]="icon">
+    </div>
+
+    <div class="alert-title">{{ title }}</div>
+    <div class="alert-description">{{ data.description }}</div>
+  </div>
+</div>

@@ -1,0 +1,959 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*
+@font-face {
+  font-family: "Raleway";
+  src: local("Raleway"),
+    url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap")
+      format("truetype");
+}
+*/
+
+img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"),
+    url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap")
+      format("truetype");
+}
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "swiper/scss";
+@import "swiper/scss/navigation";
+@import "swiper/scss/pagination";
+
+@layer utilities {
+  .w-fit {
+    width: fit-content;
+  }
+}
+
+@import "~@angular/material/theming";
+@include mat-core();
+
+$primary: (
+  900: #1a4bb7,
+  contrast: (
+    900: #1a4bb7,
+  ),
+);
+
+$accent: (
+  900: #212429,
+  contrast: (
+    900: #212429,
+  ),
+);
+
+/* add bg-color-diff-screen class to an element to show it's container box */
+.bg-color-diff-screen-500 {
+  @apply bg-gray-500 sm:bg-red-500 md:bg-green-500 lg:bg-blue-500 2xl:bg-yellow-500;
+  @apply bg-opacity-25;
+}
+.bg-color-diff-screen-700 {
+  @apply bg-gray-700 sm:bg-red-700 md:bg-green-700 lg:bg-blue-700 2xl:bg-yellow-700;
+  @apply bg-opacity-25;
+}
+
+$mat-ouline: #d1d5db;
+
+$my-app-primary: mat-palette($primary, 900);
+$my-app-accent: mat-palette($accent, 900);
+$my-app-warn: mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
+
+$typography: mat-typography-config(
+  $font-family: "Raleway",
+);
+
+@include angular-material-typography($typography);
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .slogan-container {
+    font-weight: 900;
+  }
+}
+
+body {
+  font-family: -apple-system, system-ui, "Raleway";
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+
+  -webkit-font-smoothing: antialiased !important;
+  -webkit-text-stroke-width: 0 !important;
+
+  button,
+  li,
+  span {
+    outline: none;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+.font-raleway {
+  font-family: "Raleway";
+}
+
+.font-poppins {
+  font-family: "Poppins";
+}
+
+// reference of width is from https://tailwindcss.com/docs/responsive-design
+@media (max-width: 767px) {
+  .max-sm {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .sm-only {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .md-only {
+    display: none;
+  }
+  .min-md {
+    display: none;
+  }
+}
+@media (min-width: 1023px) {
+  .md-only {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  .lg-only {
+    display: none;
+  }
+}
+
+.app-design:nth-child(odd) {
+  background-color: white;
+}
+
+.app-design:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.spacer-1 {
+  height: 10px;
+}
+.spacer-2 {
+  height: 20px;
+}
+.spacer-5 {
+  height: 50px;
+}
+.spacer-10,
+.spacer {
+  height: 100px;
+}
+.spacer-20 {
+  height: 200px;
+}
+
+.section {
+  &.section-no-gap {
+    padding-top: 0px;
+  }
+
+  &.section-full-page {
+    height: 100vh;
+  }
+
+  .section-container {
+    max-width: 1280px;
+
+    @apply justify-center;
+    @apply items-center;
+    @apply gap-6;
+    @apply w-full;
+    @apply m-auto;
+
+    /* DESKTOP*/
+    @apply lg:px-0;
+    @apply lg:items-start;
+    @apply lg:justify-between;
+
+    &.section-wide {
+      margin: initial;
+      max-width: initial;
+    }
+
+    &.padded {
+      @apply px-5;
+
+      @apply lg:px-4;
+    }
+
+    &.responsive {
+      @apply flex-col;
+
+      /* DESKTOP */
+      @apply lg:flex-row;
+    }
+
+    &.reverse-col {
+      @apply flex-col-reverse;
+
+      /* DESKTOP */
+      @apply lg:flex-row;
+    }
+
+    &.row {
+      @apply flex;
+
+      &.wrap {
+        @apply flex-wrap;
+      }
+    }
+
+    &.col {
+      @apply flex;
+      @apply flex-col;
+    }
+
+    &.no-padding-x {
+      @apply px-0;
+    }
+  }
+}
+
+.bg-primary-gradient-to-b {
+  @apply bg-gradient-to-b;
+  @apply from-primary;
+  @apply to-primary-dark;
+}
+
+.hide-scrollbar {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.first-section {
+  margin-top: -1px;
+
+  .background-container {
+    @apply relative;
+    @apply h-0;
+
+    img {
+      @apply w-full;
+      @apply absolute;
+      z-index: -1;
+      top: 0;
+    }
+  }
+
+  .section-container {
+    padding-bottom: 100px;
+
+    @apply pt-28;
+
+    /* TABLET / DESKTOP */
+    @apply md:pt-48;
+  }
+}
+
+.landing {
+  @apply flex;
+  @apply flex-col;
+  @apply gap-2;
+  @apply items-center;
+
+  /* DESKTOP */
+  @apply lg:items-start;
+
+  @media (min-width: 1024px) {
+    width: 30rem;
+  }
+}
+
+.landing-title {
+  @apply w-48;
+  @apply pt-2;
+  @apply text-sm;
+  @apply font-semibold;
+  @apply text-primary;
+  @apply text-center;
+
+  /* DESKTOP */
+  @apply lg:text-left;
+
+  font-family: "Raleway";
+
+  &.fit {
+    @apply w-fit;
+  }
+}
+
+.landing-desc {
+  @apply text-5xl;
+  @apply font-extrabold;
+  @apply leading-tight;
+  @apply text-gray-800;
+  @apply text-center;
+
+  font-family: "Raleway";
+
+  /* DESKTOP */
+  @apply lg:text-left;
+}
+
+.portfolio-title {
+  @apply font-semibold;
+  @apply text-inactive;
+  @apply text-2xl;
+  font-family: "Raleway";
+  color: #2368ff;
+}
+
+.testimonial-title {
+  @apply font-semibold;
+  @apply text-primary;
+  @apply text-sm;
+  font-family: "Raleway";
+}
+
+.section-title {
+  @apply flex;
+  @apply font-semibold;
+  @apply text-primary;
+  @apply text-xl;
+
+  font-family: "Raleway";
+
+  &.white {
+    @apply text-white;
+
+    &::before,
+    &::after {
+      @apply border-white;
+    }
+  }
+}
+
+.section-desc {
+  @apply text-3xl;
+  @apply lg:text-6xl;
+  @apply font-bold;
+  font-family: "Raleway";
+
+  @media (max-width: 1023px) {
+    @apply text-left;
+  }
+}
+
+.portfolio-content {
+  @apply text-base;
+  @apply lg:text-2xl;
+  @apply text-gray-700;
+  @apply leading-loose;
+  @apply font-light;
+  @apply w-full;
+  @apply lg:w-3/5;
+  @apply mx-auto;
+}
+
+.section-content {
+  @apply text-base;
+  @apply lg:text-2xl;
+  @apply leading-loose;
+  @apply font-light;
+
+  @media (max-width: 1023px) {
+    @apply text-left;
+  }
+}
+
+.swiper {
+  padding: 2rem 0;
+
+  @media (min-width: 767px) {
+    padding: 5rem 0;
+  }
+}
+
+.swiper-button-next {
+  border: 2px solid #1a4bb7;
+  border-radius: 100%;
+  padding: 40px;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.swiper-button-prev {
+  border: 2px solid #1a4bb7;
+  border-radius: 100%;
+  padding: 40px;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.dj-overlay {
+  z-index: 100;
+
+  @apply fixed;
+  @apply w-full;
+  @apply h-full;
+  @apply top-0;
+  @apply left-0;
+  @apply bg-opacity-95;
+
+  &.dark {
+    @apply bg-black;
+    @apply text-white;
+  }
+
+  &.light {
+    @apply bg-white;
+    @apply text-gray-800;
+  }
+
+  &.no-opacity {
+    @apply bg-opacity-100;
+  }
+
+  &.normal-opacity {
+    @apply bg-opacity-50;
+  }
+
+  &.trans-effect {
+    @apply transform;
+    @apply duration-500;
+
+    &.right {
+      @apply left-full;
+
+      &.show {
+        @apply left-0;
+      }
+    }
+  }
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: $mat-ouline;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-wrapper {
+  margin: 0 0 !important;
+}
+
+.mat-checkbox-frame {
+  border: 1.5px solid $mat-ouline !important;
+}
+
+.cdk-overlay-container {
+  z-index: 0 !important;
+}
+
+mat-form-field {
+  @apply w-full;
+}
+
+app-button {
+  @apply w-full md:w-fit;
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+}
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: "Rubik";
+  src: local("Rubik"), url(./assets/fonts/Rubik-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"),
+    url(./assets/fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer utilities {
+  .w-fit {
+    width: fit-content;
+  }
+}
+
+@import "~@angular/material/theming";
+@include mat-core();
+
+$primary: (
+  900: #1a4bb7,
+  contrast: (
+    900: #1a4bb7,
+  ),
+);
+
+$accent: (
+  900: #212429,
+  contrast: (
+    900: #212429,
+  ),
+);
+
+/* add bg-color-diff-screen class to an element to show it's container box */
+.bg-color-diff-screen-500 {
+  @apply bg-gray-500 sm:bg-red-500 md:bg-green-500 lg:bg-blue-500 2xl:bg-yellow-500;
+  @apply bg-opacity-25;
+}
+.bg-color-diff-screen-700 {
+  @apply bg-gray-700 sm:bg-red-700 md:bg-green-700 lg:bg-blue-700 2xl:bg-yellow-700;
+  @apply bg-opacity-25;
+}
+
+$mat-ouline: #d1d5db;
+
+$my-app-primary: mat-palette($primary, 900);
+$my-app-accent: mat-palette($accent, 900);
+$my-app-warn: mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
+
+$typography: mat-typography-config(
+  $font-family: "Raleway",
+);
+
+@include angular-material-typography($typography);
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Raleway";
+  /* -webkit-tap-highlight-color: rgba(255, 255, 255, 0); */
+  -webkit-font-smoothing: antialiased !important;
+
+  button,
+  li,
+  span {
+    outline: none;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    -webkit-font-smoothing: antialiased !important;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+.font-Raleway {
+  font-family: "Raleway";
+}
+
+.font-poppins {
+  font-family: "Poppins";
+}
+
+// reference of width is from https://tailwindcss.com/docs/responsive-design
+@media (max-width: 767px) {
+  .max-sm {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .sm-only {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .md-only {
+    display: none;
+  }
+  .min-md {
+    display: none;
+  }
+}
+@media (min-width: 1023px) {
+  .md-only {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  .lg-only {
+    display: none;
+  }
+}
+
+.app-design:nth-child(odd) {
+  background-color: white;
+}
+
+.app-design:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.spacer-1 {
+  height: 10px;
+}
+.spacer-2 {
+  height: 20px;
+}
+.spacer-5 {
+  height: 50px;
+}
+.spacer-10,
+.spacer {
+  height: 100px;
+}
+.spacer-20 {
+  height: 200px;
+}
+
+.section {
+  &:not(.first-section) {
+    /* padding-top: 50px; */
+  }
+
+  &.section-no-gap {
+    padding-top: 0px;
+  }
+
+  &.section-full-page {
+    height: 100vh;
+  }
+
+  .section-container {
+    max-width: 1280px;
+
+    @apply justify-center;
+    @apply items-center;
+    @apply gap-6;
+    @apply w-full;
+    @apply m-auto;
+
+    /* DESKTOP*/
+    @apply lg:px-0;
+    @apply lg:items-start;
+    @apply lg:justify-between;
+
+    &.section-wide {
+      margin: initial;
+      max-width: initial;
+    }
+
+    &.padded {
+      @apply px-5;
+
+      @apply lg:px-4;
+    }
+
+    &.responsive {
+      @apply flex-col;
+
+      /* DESKTOP */
+      @apply lg:flex-row;
+    }
+
+    &.reverse-col {
+      @apply flex-col-reverse;
+
+      /* DESKTOP */
+      @apply lg:flex-row;
+    }
+
+    &.row {
+      @apply flex;
+
+      &.wrap {
+        @apply flex-wrap;
+      }
+    }
+
+    &.col {
+      @apply flex;
+      @apply flex-col;
+    }
+
+    &.no-padding-x {
+      @apply px-0;
+    }
+  }
+}
+
+.bg-primary-gradient-to-b {
+  @apply bg-gradient-to-b;
+  @apply from-primary;
+  @apply to-primary-dark;
+}
+
+.hide-scrollbar {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.first-section {
+  margin-top: -1px;
+
+  .background-container {
+    @apply relative;
+    @apply h-0;
+
+    img {
+      @apply w-full;
+      @apply absolute;
+      z-index: -1;
+      top: 0;
+    }
+  }
+
+  .section-container {
+    padding-bottom: 100px;
+
+    @apply pt-28;
+
+    /* TABLET / DESKTOP */
+    @apply md:pt-48;
+  }
+}
+
+.last-section {
+  @apply relative;
+  @extend .font-raleway;
+
+  img {
+    @apply w-full;
+  }
+
+  & > div {
+    @apply top-0;
+    @apply absolute;
+    @apply w-full;
+    @apply h-full;
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
+    @apply justify-center;
+    @apply gap-4;
+    @apply px-10;
+
+    .text {
+      @apply text-2xl;
+      @apply font-bold;
+      @apply tracking-wider;
+      @apply text-white;
+      @apply text-center;
+    }
+
+    button {
+      @apply w-full;
+
+      /* DESKTOP */
+      @apply lg:w-fit;
+    }
+  }
+}
+
+.underline-removed {
+  border-top-width: 0 !important;
+}
+
+.landing-desc {
+  @apply text-5xl;
+  @apply font-extrabold;
+  @apply leading-tight;
+  @apply text-gray-800;
+  @apply text-center;
+
+  font-family: "Raleway";
+
+  /* DESKTOP */
+  @apply lg:text-left;
+}
+
+.landing-content {
+  @apply text-base;
+  @apply leading-loose;
+}
+
+.section-title {
+  @apply flex;
+  @apply font-semibold;
+  @apply text-primary;
+  @apply text-xl;
+
+  font-family: "Raleway";
+
+  @mixin after-line {
+    &:after {
+      content: "";
+
+      @apply w-14;
+      @apply ml-2;
+      @apply border-primary;
+
+      border-bottom-width: 2px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &:not(.right) {
+    @include after-line;
+  }
+
+  &.right {
+    /* MOBILE */
+    @media (max-width: 1023px) {
+      @include after-line;
+    }
+
+    /* DESKTOP*/
+    @media (min-width: 1024px) {
+      @apply justify-end;
+
+      &:before {
+        content: "";
+
+        @apply w-14;
+        @apply mr-2;
+        @apply border-primary;
+
+        border-bottom-width: 2px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &.white {
+    @apply text-white;
+
+    &::before,
+    &::after {
+      @apply border-white;
+    }
+  }
+}
+
+.dj-overlay {
+  z-index: 100;
+
+  @apply fixed;
+  @apply w-full;
+  @apply h-full;
+  @apply top-0;
+  @apply left-0;
+  @apply bg-opacity-95;
+
+  &.dark {
+    @apply bg-black;
+    @apply text-white;
+  }
+
+  &.light {
+    @apply bg-white;
+    @apply text-gray-800;
+  }
+
+  &.no-opacity {
+    @apply bg-opacity-100;
+  }
+
+  &.normal-opacity {
+    @apply bg-opacity-50;
+  }
+
+  &.trans-effect {
+    @apply transform;
+    @apply duration-500;
+
+    &.right {
+      @apply left-full;
+
+      &.show {
+        @apply left-0;
+      }
+    }
+  }
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: $mat-ouline;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-wrapper {
+  margin: 0 0 !important;
+}
+
+.mat-checkbox-frame {
+  border: 1.5px solid $mat-ouline !important;
+}
+
+.cdk-overlay-container {
+  z-index: 0 !important;
+}
+
+mat-form-field {
+  @apply w-full;
+}
+
+@media (max-width: 767px) {
+  #contact-us-section .text {
+    padding-top: 20px;
+  }
+}
+@keyframes pulse {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: transparent !important;
+}
+
+.mat-tab-nav-bar,
+.mat-tab-header {
+  border-bottom: 0 !important;
+}

@@ -1,0 +1,97 @@
+<form [formGroup]="loanPaymentExtensionForm" name="cash-loan" (submit)="loanPaymentExtension($event)">
+  <h1>Loan Payment Extension</h1>
+  <div class="first-section">
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" type="text" name="name">
+        <mat-error>Name is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Date</mat-label>
+        <input matInput formControlName="date" type="date" name="date">
+        <mat-error>Date is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Loan Amount</mat-label>
+        <input matInput formControlName="loanAmount" type="text" name="loanAmount">
+        <mat-error>Loan Amount is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Extension Date</mat-label>
+        <input matInput formControlName="extensionDate" type="date" name="extensionDate">
+        <mat-error>Extension Date is required.</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Reason</mat-label>
+      <textarea formControlName="reason" name="reason" matInput></textarea>
+    </mat-form-field>
+  </div>
+  <div class="first-section">
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Loan Balance</mat-label>
+        <input matInput formControlName="loanBalance" type="text" name="loanBalance">
+        <mat-error>Loan Balance is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Amount Of Payroll Deduction</mat-label>
+        <input matInput formControlName="amountOfPayrollDeduction" type="text" name="amountOfPayrollDeduction">
+        <mat-error>Amount Of Payroll Deduction is required.</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="flex justify-between">
+    <div class="w-2/5">
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Borrower's Signature</mat-label>
+        <input matInput formControlName="borrowersSignature" type="text" name="borrowersSignature">
+        <mat-error>Borrower's Signature is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <p class="text-right">
+        <span>ENDORSED BY:</span> <br />
+        <span class="font-bold underline">FLORAMIE FELDSTEIN</span> <br />
+        General Manager
+      </p>
+    </div>
+  </div>
+  <div>
+    <p>APPROVED BY:</p>
+  </div>
+  <div class="flex justify-between">
+    <div>
+      <p>
+        <span class="font-bold underline">LEON FEDRO</span> <br />
+        CEO/President
+      </p>
+    </div>
+    <div>
+      <p class="text-right">
+        <span class="font-bold underline">LINDSAY CLARK</span> <br />
+        CFO/Vice-President
+      </p>
+    </div>
+  </div>
+  <div>
+    <p>
+      <span>RECEIVED BY:</span> <br />
+      <span class="font-bold underline">ANNA MARIE ILAIDA</span> <br />
+      Accounting Manager
+    </p>
+  </div>
+  <app-button [isSubmit]="true" [isResponsive]="true" class="w-full" [isDisabled]="loanPaymentExtensionForm.invalid">
+  </app-button>
+</form>

@@ -1,0 +1,21 @@
+.position-card {
+  @apply cursor-pointer;
+  @apply transform;
+  @apply duration-300;
+  @apply shadow-xl rounded-lg px-8 py-4 my-2 border-2 border-transparent bg-primary2;
+  @apply w-full;
+  @apply hover:border-primary;
+  height: 89%;
+
+  .position-title {
+    @apply text-xl text-white font-bold;
+  }
+
+  .position-description {
+    @apply pt-2 pb-4 text-sm text-white;
+  }
+
+  button {
+    @apply text-white text-sm font-semibold;
+  }
+}

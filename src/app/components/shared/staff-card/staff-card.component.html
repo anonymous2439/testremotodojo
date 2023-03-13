@@ -1,0 +1,23 @@
+<div class="staff-container" class="{{ role }}">
+  <div class="image-container">
+    <div class="overlay-container">
+      <div class="overlay-content">
+        <div class="relative">
+          <span class="icon">
+            <img
+              src="./../../../../assets/icons/quote.svg"
+              width="25px"
+              alt="Quote"
+            />
+          </span>
+        </div>
+
+        <span class="quote">{{ data.quote }}</span>
+      </div>
+    </div>
+    <img [src]="data.img" alt="" class="avatar" />
+  </div>
+
+  <p class="position">{{ data.position }}</p>
+  <p class="name">{{ data.name }}</p>
+</div>

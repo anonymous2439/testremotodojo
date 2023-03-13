@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920.101" height="509.933" viewBox="0 0 1920.101 509.933">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="-0.449" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1a4bb7"/>
+      <stop offset="1" stop-color="#212429"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <path id="Path_320" data-name="Path 320" d="M-21000-19660.906h-1920v-381.219s287.643-98.223,680.75-51.791,502.58,60.893,778.713,51.791,460.537-51.791,460.537-51.791Z" transform="translate(22920 24415.906)" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="Contact_Us_bg" data-name="Contact Us bg" transform="translate(0.076 -4245.067)">
+    <path id="Path_119" data-name="Path 119" d="M1920,4342.648s-343.723-75.557-572.146-79.07S629.191,4404.148,404.279,4381.3,0,4282.906,0,4282.906V4627.3H1920Z" fill="rgba(26,75,183,0.1)"/>
+    <path id="Path_120" data-name="Path 120" d="M0,4253.432s212.672-32.842,465.7,35.686,307.5,119.484,657.164,47.441S1526.4,4253.975,1920,4273.3" fill="none" stroke="#e2e2e2" stroke-width="1"/>
+    <path id="Path_118" data-name="Path 118" d="M-21000-19660.906h-1920v-381.219s287.643-98.223,680.75-51.791,502.58,60.893,778.713,51.791,460.537-51.791,460.537-51.791Z" transform="translate(22920 24415.906)" fill="url(#linear-gradient)"/>
+    <g id="Mask_Group_14" data-name="Mask Group 14" clip-path="url(#clip-path)">
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="161" cy="161" r="161" transform="translate(93 4266)" fill="#fff" opacity="0.5" style="mix-blend-mode: overlay;isolation: isolate"/>
+    </g>
+    <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(1680 4538)" fill="none" stroke="#fff" stroke-width="2" opacity="0.5" style="mix-blend-mode: overlay;isolation: isolate">
+      <circle cx="89" cy="89" r="89" stroke="none"/>
+      <circle cx="89" cy="89" r="88" fill="none"/>
+    </g>
+    <circle id="Ellipse_3" data-name="Ellipse 3" cx="33" cy="33" r="33" transform="translate(1658 4538)" fill="#fff" opacity="0.5" style="mix-blend-mode: overlay;isolation: isolate"/>
+  </g>
+</svg>

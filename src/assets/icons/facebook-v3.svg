@@ -1,0 +1,7 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30">
+	<title>facebook-v3-svg</title>
+	<style>
+		.s0 { fill: #2368ff } 
+	</style>
+	<path id="Layer" class="s0" d="m30 15.1c0 7.5-5.5 13.7-12.7 14.8v-10.5h3.5l0.7-4.3h-4.2v-2.8c0-1.2 0.6-2.4 2.5-2.4h1.9v-3.7c0 0-1.7-0.3-3.4-0.3-3.4 0-5.6 2.1-5.6 5.9v3.3h-3.9v4.3h3.9v10.5c-7.2-1.1-12.7-7.3-12.7-14.8 0-8.3 6.7-15 15-15 8.3 0 15 6.7 15 15z"/>
+</svg>

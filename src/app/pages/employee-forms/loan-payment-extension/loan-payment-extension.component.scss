@@ -1,0 +1,42 @@
+form {
+  @apply text-xl;
+  @apply mb-20;
+  box-shadow: 1px 0px 10px 5px rgba(54, 108, 226, 0.2);
+  -webkit-box-shadow: 1px 0px 10px 5px rgba(54, 108, 226, 0.2);
+  -moz-box-shadow: 1px 0px 10px 5px rgba(54, 108, 226, 0.2);
+  @apply p-10;
+  @apply rounded-xl;
+
+  h1 {
+    @apply text-center;
+    @apply text-2xl;
+    @apply tracking-widest;
+    @apply uppercase;
+    @apply font-bold;
+  }
+
+  label {
+    @apply mr-3;
+  }
+
+  input {
+    @apply border-b;
+  }
+
+  textarea {
+    @apply w-full;
+    @apply box-border;
+    @apply border;
+  }
+
+  div {
+    @apply py-2.5;
+  }
+
+  .first-section {
+    @apply grid;
+    @apply grid-cols-2;
+    @apply mt-5;
+    @apply gap-5;
+  }
+}

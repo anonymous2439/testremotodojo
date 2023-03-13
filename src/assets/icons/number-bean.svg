@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="127.398" height="122.196" viewBox="0 0 127.398 122.196">
+  <defs>
+    <filter id="Path_4" x="0" y="0" width="127.398" height="122.196" filterUnits="userSpaceOnUse">
+      <feOffset dy="15" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#1a4bb7" flood-opacity="0.149"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_8" data-name="Group 8" transform="translate(-280.553 -476.125)">
+    <g transform="matrix(1, 0, 0, 1, 280.55, 476.12)" filter="url(#Path_4)">
+      <path id="Path_4-2" data-name="Path 4" d="M27.3,5.768c21.227,12.972,40.1,8.887,40.1,26.457S49.382,64.038,31.812,64.038A31.812,31.812,0,0,1,0,32.225C0,14.656,6.075-7.2,27.3,5.768Z" transform="translate(30 13.16)" fill="#1a4bb7"/>
+    </g>
+    <path id="Path_phone" data-name="Path / phone" d="M6.62,10.79a15.1,15.1,0,0,0,6.59,6.59l2.2-2.2a1,1,0,0,1,1.02-.25A11.36,11.36,0,0,0,20,15.5a1,1,0,0,1,1,1V20a1,1,0,0,1-1,1A17,17,0,0,1,3,4,1,1,0,0,1,4,3H7.5a1,1,0,0,1,1,1,11.36,11.36,0,0,0,.57,3.57,1,1,0,0,1-.25,1.02Z" transform="translate(332.252 510.223)" fill="#fff"/>
+  </g>
+</svg>

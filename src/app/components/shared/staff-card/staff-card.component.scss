@@ -1,0 +1,62 @@
+.staff-container {
+  @apply w-full;
+
+  .image-container {
+    @apply relative overflow-hidden;
+
+    &:hover {
+      .overlay-container {
+        @apply bg-primary absolute bg-opacity-20 h-full w-full z-10;
+        @apply transform duration-300 rounded-xl;
+
+        .overlay-content {
+          @apply bottom-0 flex;
+
+          .quote {
+            font-size: 13px;
+            @apply rounded-xl;
+          }
+        }
+      }
+    }
+    img.avatar {
+      @apply w-full;
+      background-color: #f0f0f0;
+      @apply rounded-xl;
+    }
+
+    .overlay-container {
+      .overlay-content {
+        @apply bg-primary absolute w-full left-0;
+        @apply -bottom-full;
+        @apply transform duration-200;
+        @apply flex flex-col;
+        @apply text-white;
+        @apply rounded-bl-xl;
+        @apply rounded-br-xl;
+
+        .icon {
+          @apply absolute left-2 opacity-50;
+          top: -10px;
+
+          img {
+            width: 20px;
+          }
+        }
+
+        .quote {
+          @apply text-center px-4 py-2;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+.position {
+  @apply text-primary2 text-sm pt-5 font-medium;
+}
+
+.name {
+  @apply text-lg font-bold text-black;
+}

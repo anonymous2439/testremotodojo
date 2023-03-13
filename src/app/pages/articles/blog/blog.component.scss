@@ -1,0 +1,222 @@
+.blog-section-subtitle {
+  @apply text-primary2;
+  @apply text-lg;
+  @apply font-semibold;
+}
+
+.blog-section-title {
+  @apply text-black;
+  @apply text-3xl md:text-4xl;
+  @apply font-bold;
+}
+
+.blog-section-desc {
+  @apply text-base;
+  @apply font-normal;
+  @apply leading-relaxed;
+  @apply text-black;
+}
+
+.blog-section-featured-image {
+  img {
+    @apply rounded-xl;
+    @apply mx-auto;
+  }
+}
+
+.blog-section {
+  .blog-section-banner {
+    @apply max-w-screen-xl mx-auto;
+    @apply py-40 px-4 sm:px-0;
+    @apply text-center;
+    @apply space-y-8;
+
+    .blog-section-desc {
+      @apply text-gray-600;
+      @apply text-sm;
+    }
+  }
+
+  .blog-section-content {
+    @apply max-w-screen-xl mx-auto;
+    @apply px-4 sm:px-0;
+  }
+}
+
+.app-blog {
+  @apply flex;
+  @apply flex-col;
+
+  .section-1 {
+    background-color: #fff;
+    @apply pb-8;
+
+    .section-container {
+      @apply transform;
+      @apply duration-100;
+      @apply flex-col-reverse;
+      @apply mb-10;
+
+      /* DESKTOP */
+      @apply lg:flex-row;
+
+      @apply mt-20;
+      @apply md:mt-40;
+
+      .blog-title {
+        @apply flex;
+        @apply flex-col;
+        @apply justify-center;
+        @apply gap-16;
+        @apply pt-0;
+
+        /* DESKTOP */
+        @apply lg:pt-36;
+        @media (min-width: 1024px) {
+          max-width: 500px;
+        }
+
+        .text {
+          @apply text-4xl;
+          @apply font-semibold;
+          @apply text-black;
+          @apply tracking-wider;
+
+          font-family: "Raleway";
+        }
+
+        .stats {
+          @apply flex;
+          @apply flex-wrap;
+          @apply justify-between;
+          @apply gap-4;
+
+          max-width: 500px;
+
+          div {
+            @apply flex;
+            @apply items-center;
+            @apply justify-center;
+            @apply gap-2;
+          }
+        }
+      }
+
+      .landing-image {
+        @apply overflow-hidden;
+        @apply rounded-lg;
+        @apply w-full;
+
+        height: 420px;
+        max-height: 100%;
+
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @media (min-width: 560px) {
+          max-width: 100%;
+          width: 500px;
+        }
+      }
+    }
+  }
+
+  .section-2 {
+    @apply bg-white;
+    @apply pt-10;
+
+    .blog-container {
+      @apply flex flex-col gap-14;
+      @apply w-full;
+
+      input {
+        @apply text-white;
+      }
+
+      textarea {
+        @apply text-white;
+      }
+
+      .blog-content {
+        @apply w-full;
+        color: #fff !important;
+      }
+
+      .discussion {
+        .section-desc {
+          @apply text-white;
+        }
+      }
+    }
+  }
+}
+
+.blog-content {
+  font-family: "Raleway";
+
+  .title {
+    @apply font-bold;
+    @apply mt-5;
+    @apply mb-2;
+    @apply text-black;
+    @apply text-base;
+  }
+
+  span {
+    @apply text-primary;
+  }
+
+  p {
+    @apply mb-5;
+    @apply text-black;
+    @apply text-lg;
+    @apply leading-loose;
+  }
+
+  img {
+    @apply w-full;
+    @apply rounded;
+    @apply mb-5;
+
+    &.right {
+      @apply lg:w-2/3;
+      @apply lg:float-right;
+      @apply lg:ml-5;
+    }
+
+    &.left {
+      @apply lg:w-2/3;
+      @apply lg:float-left;
+      @apply lg:mr-5;
+    }
+  }
+
+  a {
+    @apply no-underline;
+    @apply text-primary;
+  }
+
+  .conclusion {
+    @apply rounded-xl;
+    @apply shadow-xl;
+    @apply overflow-hidden;
+    @apply flex;
+    @apply w-full;
+    @apply mt-10;
+
+    & > .indicator {
+      @apply bg-primary;
+      @apply w-2;
+      @apply flex-none;
+    }
+
+    & > .content {
+      @apply p-6;
+
+      & > p {
+        @apply m-0;
+      }
+    }
+  }
+}

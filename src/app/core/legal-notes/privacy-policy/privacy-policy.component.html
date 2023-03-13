@@ -1,0 +1,15 @@
+<div class="section section-no-gap privacy">
+  <div class="privacy-banner">
+    <div class="privacy-header">
+      <div class="privacy-title">Privacy Policy</div>
+    </div>
+  </div>
+  <div class="section-container padded">
+    <div class="content">
+      <div *ngFor="let section of sections" [id]="section.frag" class="pt-10">
+        <div class="title">{{ section.desc }}</div>
+        <p [innerHTML]="section.content"></p>
+      </div>
+    </div>
+  </div>
+</div>

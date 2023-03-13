@@ -1,0 +1,197 @@
+.sub-landing {
+  @apply py-28 lg:py-40;
+
+  .section-1 {
+    @apply px-6;
+    .section-container {
+      @apply relative;
+      @apply p-10;
+      @apply bg-white;
+      @apply shadow-xl;
+      @apply rounded-xl;
+
+      .landing-graph {
+        @apply text-sm;
+        @apply lg:text-right;
+        @apply text-gray-700;
+        @apply leading-loose;
+        @apply whitespace-pre-line;
+
+        @media (min-width: 1024px) {
+          width: 36.8rem;
+        }
+      }
+
+      .apply-btn-container-bottom {
+        @apply w-full;
+        @apply lg:hidden;
+
+        button {
+          @apply w-full;
+        }
+      }
+    }
+  }
+
+  .section-2,
+  .section-3,
+  .section-4 {
+    .section-container {
+      @apply gap-0;
+      @apply items-start;
+    }
+  }
+
+  .last-section {
+    .section-container {
+      @apply pb-10;
+    }
+  }
+
+  .close-btn {
+    @apply absolute;
+    @apply flex;
+    @apply items-center;
+    @apply justify-center;
+    @apply w-8;
+    @apply h-8;
+    @apply bg-white;
+    @apply rounded-full;
+    @apply shadow-xl;
+    @apply -top-4;
+    @apply -left-4;
+    @apply transform;
+    @apply hover:scale-110;
+    @apply hover:border;
+    @apply hover:border-primary;
+    @apply duration-300;
+
+    img {
+      @apply transform;
+      @apply rotate-45;
+    }
+  }
+
+  .apply-btn {
+    @apply flex justify-center px-10;
+  }
+
+  .apply-btn {
+    button {
+      @apply w-full lg:w-fit;
+    }
+  }
+
+  .section-5 {
+    @apply pt-0;
+    @apply flex;
+    @apply justify-center;
+
+    .section-container {
+      @apply items-start;
+      @apply justify-end;
+      @apply gap-5;
+
+      @media (min-width: 300px) {
+        bottom: -1000px;
+      }
+
+      @media (min-width: 340px) {
+        bottom: -950px;
+      }
+
+      @media (min-width: 380px) {
+        bottom: -800px;
+      }
+
+      @media (min-width: 460px) {
+        bottom: -700px;
+      }
+
+      @media (min-width: 540px) {
+        bottom: -600px;
+      }
+
+      @media (min-width: 600px) {
+        bottom: -500px;
+      }
+
+      @media (min-width: 800px) {
+        bottom: -400px;
+      }
+
+      @media (min-width: 900px) {
+        bottom: -300px;
+      }
+
+      @media (min-width: 1000px) {
+        bottom: -200px;
+      }
+
+      @media (min-width: 1200px) {
+        bottom: -100px;
+      }
+
+      @media (min-width: 1360px) {
+        bottom: 0px;
+      }
+
+      .positions-container {
+        @apply w-full;
+        @apply flex;
+        @apply flex-col;
+        @apply md:flex-row;
+        @apply justify-between;
+        @apply gap-2;
+      }
+    }
+  }
+
+  .overlap-for-last {
+    @apply bg-accents;
+
+    @media (min-width: 300px) {
+      height: 500px;
+    }
+
+    @media (min-width: 340px) {
+      height: 450px;
+    }
+
+    @media (min-width: 380px) {
+      height: 400px;
+    }
+
+    @media (min-width: 460px) {
+      height: 350px;
+    }
+
+    @media (min-width: 540px) {
+      height: 300px;
+    }
+
+    @media (min-width: 600px) {
+      height: 250px;
+    }
+
+    @media (min-width: 800px) {
+      height: 200px;
+    }
+
+    @media (min-width: 900px) {
+      height: 150px;
+    }
+
+    @media (min-width: 1000px) {
+      height: 100px;
+    }
+
+    @media (min-width: 1200px) {
+      height: 20px;
+    }
+
+    @media (min-width: 1360px) {
+      height: 0px;
+    }
+  }
+}

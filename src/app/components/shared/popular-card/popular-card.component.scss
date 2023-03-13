@@ -1,0 +1,26 @@
+.card {
+  @apply bg-transparent;
+  @apply grid grid-cols-3;
+
+  .image {
+    @apply col-span-1;
+    @apply w-20;
+    @apply h-20;
+    @apply overflow-hidden;
+    @apply cursor-pointer;
+    @apply rounded-xl;
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  .title {
+    @apply text-base;
+    @apply font-semibold;
+    @apply text-black;
+    @apply cursor-pointer;
+    @apply transform;
+    @apply duration-300;
+    @apply group-hover:text-primary;
+  }
+}

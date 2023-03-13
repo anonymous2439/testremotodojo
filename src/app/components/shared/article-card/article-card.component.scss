@@ -1,0 +1,41 @@
+.article-cards {
+  @apply shadow-xl;
+  @apply border;
+  @apply rounded-xl;
+  @apply cursor-pointer;
+  @apply h-80;
+  @apply w-full;
+  @apply min-h-full;
+  @apply flex flex-col justify-end;
+
+  .article-card-feature-img-wrapper {
+    @apply relative;
+    @apply h-full;
+    @apply overflow-hidden;
+    @apply cursor-pointer;
+    @apply rounded-t-xl;
+
+    .article-card-feature-img {
+      @apply w-full;
+      @apply h-full;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .article-card-desc {
+    @apply p-6;
+
+    .article-title {
+      @apply font-medium;
+      @apply text-base;
+    }
+
+    .article-read-more {
+      @apply text-primary2;
+      @apply font-medium;
+      @apply text-sm;
+    }
+  }
+}

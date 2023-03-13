@@ -1,0 +1,39 @@
+<form class="reply" [formGroup]="form">
+  <span class="text-xs text-gray-500">Your e-mail address will not be published. Required fields are marked
+    *</span>
+
+  <div class="flex flex-wrap gap-4 lg:flex-nowrap">
+    <mat-form-field appearance="outline">
+      <mat-label class="text-white">Full Name *</mat-label>
+      <input matInput formControlName="fullName" />
+
+      <mat-error>Full name is required.</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label class="text-white">E-mail Address *</mat-label>
+      <input matInput formControlName="email" />
+
+      <mat-error>E-mail address is required.</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label class="text-white">Website URL</mat-label>
+      <input matInput formControlName="websiteUrl" />
+    </mat-form-field>
+  </div>
+
+  <mat-form-field appearance="outline">
+    <mat-label class="text-white">Comment *</mat-label>
+    <textarea matInput placeholder="Tell us about your opinion." rows="10" formControlName="comment"></textarea>
+
+    <mat-error>Please tell us what you think.</mat-error>
+  </mat-form-field>
+
+  <mat-checkbox class="text-xs text-white" formControlName="saveEmail">
+    Save my name, e-mail address, and website URL in this browser for the next
+    time I comment.
+  </mat-checkbox>
+
+  <app-button [isSubmit]="true" [isDisabled]="form.invalid" [isResponsive]="true"></app-button>
+</form>
+
+<app-alert-popup *ngIf="showSuccessAlert" [data]="successAlert" (close)="closeAlertPopup()"></app-alert-popup>

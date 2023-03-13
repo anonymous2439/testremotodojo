@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="1995.057" height="999.402" viewBox="0 0 1995.057 999.402" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#212429"/>
+      <stop offset="1" stop-color="#1a4bb7"/>
+    </linearGradient>
+    <filter id="Path_7" x="0" y="22.769" width="381.379" height="954.867" filterUnits="userSpaceOnUse">
+      <feOffset dy="15" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="25" result="blur"/>
+      <feFlood flood-color="#1a4bb7" flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="hero_background" data-name="hero background" transform="matrix(1.040599, 0, 0, 1.002329, -2.946872, -102.079697)" style="">
+    <rect id="Rectangle_10" data-name="Rectangle 10" width="1920.004" height="998.922" transform="translate(0 100)" fill="#fff"/>
+    <g id="Group_28" data-name="Group 28" transform="translate(-0.271)">
+      <path id="Path_13" data-name="Path 13" d="M865,101.5s64.518,274.84,366.039,274.84,685.986,150.76,740.809,406.6,168.424,267.932,168.424,267.932" transform="translate(-220)" fill="none" stroke="#e2e2e2" stroke-width="1"/>
+      <path id="Path_9" data-name="Path 9" d="M-20999.729-24816.5v927.1s-239.941-29.7-244.211-249.439,68.3-243.5-89.086-415.732-582.025,49.871-656.264-261.928C-21989.289-24816.5-20999.729-24816.5-20999.729-24816.5Z" transform="translate(22920 24918)" fill="rgba(26,75,183,0.3)"/>
+      <path id="Path_6" data-name="Path 6" d="M745,100s99.156,142.867,348.623,112.689,474.793,32.189,565.326,263.551-10.576,435.521,261.322,523.076V100Z" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Group_27" data-name="Group 27">
+      <path id="Path_12" data-name="Path 12" d="M0,1030.857s19.391-114,208.617-341.068S285.357,221.014,86.629,99.947" fill="none" stroke="#e2e2e2" stroke-width="1"/>
+      <g transform="matrix(1, 0, 0, 1, -75, 99.52)" filter="url(#Path_7)">
+        <path id="Path_7-2" data-name="Path 7" d="M-22920-24735.711s137.85,47.512,191.3,157.383,71.268,219.746-61.422,411.4S-22920-23928-22920-23930.973Z" transform="translate(22995 24818.48)" fill="url(#linear-gradient)"/>
+      </g>
+      <path id="Path_10" data-name="Path 10" d="M-22920-24786.59s209.1,29.7,241.77,216.775-139.566,234.592-241.77,394.945Z" transform="translate(22920 24918)" fill="rgba(26,75,183,0.3)"/>
+    </g>
+  </g>
+</svg>

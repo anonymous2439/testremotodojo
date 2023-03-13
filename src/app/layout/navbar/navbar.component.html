@@ -1,0 +1,76 @@
+<div class="navbar-wrapper" (scroll)="onWindowScroll()">
+  <div class="container mx-auto">
+    <nav class="navbar">
+      <div class="logo-container" routerLink="/">
+        <div class="logo-container-desktop">
+          <img src="./../../../assets/logos/dojo-logo-v3-black-text.svg" />
+        </div>
+        <div class="logo-container-mobile">
+          <img src="./../../../assets/logos/dojo-logo-v3-white-text.svg" />
+        </div>
+      </div>
+
+      <div class="navigator">
+        <div class="menu group" *ngFor="let menu of menuList">
+          <button [routerLink]="menu.route" routerLinkActive="active">
+            {{ menu.name }}&nbsp;
+            <fa-icon *ngIf="menu.subMenu.length" [icon]="faAngleDown">
+            </fa-icon>
+          </button>
+          <ul *ngIf="menu.subMenu.length" class="sub-menu">
+            <li *ngFor="let sub of menu.subMenu" [routerLink]="sub.route" [fragment]="sub.fragmentId">
+              {{ sub.name }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hidden lg:block">
+        <div>
+          <a class="nav-btn on-scroll-btn" [routerLink]="routers.Contact">Contact</a>
+        </div>
+      </div>
+
+      <button class="toggle-btn" (click)="toggleMobileNav(!showNavMobile)">
+        <fa-icon *ngIf="!showNavMobile" [icon]="faBars" class="fill-on-scroll"></fa-icon>
+        <fa-icon *ngIf="showNavMobile" [icon]="faClose" class="fill-on-scroll"></fa-icon>
+      </button>
+    </nav>
+  </div>
+</div>
+
+<div class="dj-overlay trans-effect right no-opacity" [class.show]="showNavMobile" (click)="outsideTrigger($event)">
+  <div class="nav-mobile">
+    <div class="content">
+      <ul class="menu-mobile">
+        <li [id]="menu.id" *ngFor="let menu of menuList" (click)="navigateMenu(menu, $event)">
+          <div class="title" [class.text-primary2]="collapsedMenu === menu.id">
+            <div>
+              {{ menu.name }}
+            </div>
+            <span class="duration-75 transform" [class.rotate-180]="collapsedMenu === menu.id">
+              <fa-icon *ngIf="menu.subMenu.length" [icon]="faAngleDown"></fa-icon>
+            </span>
+          </div>
+
+          <ul [id]="'navSubMenu' + menu.id" class="sub-mobile">
+            <li *ngFor="let sub of menu.subMenu" (click)="toggleMobileNav(false)" [routerLink]="sub.route"
+              [fragment]="sub.fragmentId">
+              <div class="title">
+                <div>{{ sub.name }}</div>
+              </div>
+            </li>
+          </ul>
+        </li>
+
+        <li [routerLink]="routers.Contact" (click)="toggleMobileNav(false)">
+          <div class="title">
+            <div>
+              Contact
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

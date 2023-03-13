@@ -1,0 +1,102 @@
+.privacy {
+  @apply bg-black;
+
+  .privacy-banner {
+    background: url("../../../../assets/banners/about-banner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000;
+
+    .privacy-header {
+      @apply max-w-screen-xl mx-auto py-28 lg:py-40;
+
+      .privacy-title {
+        @apply text-primary text-3xl font-bold text-center;
+      }
+    }
+  }
+
+  .section-container {
+    @apply flex;
+    @apply flex-col;
+    @apply items-start;
+
+    @apply md:flex-row;
+  }
+
+  @apply h-full;
+
+  .content {
+    @apply inline-grid;
+    @apply gap-5;
+    @apply pb-10;
+    @apply md:pl-5;
+    font-family: "Rubik";
+
+    .title {
+      @apply font-bold;
+      @apply mb-2;
+      @apply text-primary2;
+      @apply text-base;
+    }
+
+    p {
+      @apply text-white;
+      @apply text-sm;
+      @apply leading-loose;
+      @apply whitespace-pre-line;
+    }
+
+    li {
+      margin-left: 15px;
+    }
+
+    img {
+      @apply w-full;
+      @apply rounded;
+      @apply mb-5;
+
+      &.right {
+        @apply md:w-2/3;
+        @apply md:float-right;
+        @apply md:ml-5;
+      }
+
+      &.left {
+        @apply md:w-2/3;
+        @apply md:float-left;
+        @apply md:mr-5;
+      }
+    }
+
+    a {
+      @apply no-underline;
+      @apply text-primary;
+    }
+
+    .conclusion {
+      @apply rounded-xl;
+      @apply shadow-xl;
+      @apply overflow-hidden;
+      @apply flex;
+      @apply w-full;
+      @apply mt-10;
+
+      & > .indicator {
+        @apply bg-primary;
+        @apply w-2;
+        @apply flex-none;
+      }
+
+      & > .content {
+        @apply p-6;
+
+        & > p {
+          @apply m-0;
+        }
+      }
+    }
+  }
+}

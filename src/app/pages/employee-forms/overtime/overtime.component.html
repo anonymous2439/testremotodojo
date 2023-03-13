@@ -1,0 +1,119 @@
+<form [formGroup]="overtimeForm">
+  <h1>Overtime</h1>
+  <div class="first-section">
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Employee Name</mat-label>
+        <input matInput formControlName="employeeName" type="text" name="employeeName">
+        <mat-error>Employee Name is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Employee ID</mat-label>
+        <input matInput formControlName="employeeId" type="text" name="employeeId">
+        <mat-error>Employee Id is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Department</mat-label>
+        <input matInput formControlName="department" type="text" name="department">
+        <mat-error>Department is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Employment Status</mat-label>
+        <input matInput formControlName="employmentStatus" type="text" name="employmentStatus">
+        <mat-error>Employment Status is required.</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>Designation</mat-label>
+      <input matInput formControlName="designation" type="text" name="designation">
+      <mat-error>Designation is required.</mat-error>
+    </mat-form-field>
+  </div>
+  <div class="grid grid-cols-3 gap-5">
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Date Of Overtime</mat-label>
+        <input matInput formControlName="dateOfOvertime" type="text" name="dateOfOvertime">
+        <mat-error>Date Of Overtime is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>In</mat-label>
+        <input matInput formControlName="in" type="text" name="in">
+        <mat-error>In is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Out</mat-label>
+        <input matInput formControlName="out" type="text" name="out">
+        <mat-error>Out is required.</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 gap-5">
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Name Of Reliever</mat-label>
+        <input matInput formControlName="nameOfReliever" type="text" name="nameOfReliever">
+        <mat-error>Name Of Reliever is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Designation</mat-label>
+        <input matInput formControlName="designation" type="text" name="designation">
+        <mat-error>Designation is required.</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Reason/Justifications</mat-label>
+      <textarea formControlName="reason" name="reason" matInput></textarea>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Remarks</mat-label>
+      <textarea formControlName="remarks" name="remarks" matInput></textarea>
+    </mat-form-field>
+  </div>
+  <div>
+    <p><strong>NOTE: This form must be accomplished and submitted to Admin Department</strong></p>
+  </div>
+  <div class="grid grid-cols-3 gap-5 justify-between">
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Requested By</mat-label>
+        <input matInput formControlName="requestedBy" type="text" name="requestedBy">
+        <mat-error>Requested By is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Approved By</mat-label>
+        <input matInput formControlName="approvedBy" type="text" name="approvedBy">
+        <mat-error>Approved By is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Received By</mat-label>
+        <input matInput formControlName="receivedBy" type="text" name="receivedBy">
+        <mat-error>Received By is required.</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <app-button [isSubmit]="true" [isResponsive]="true" class="w-full" [isDisabled]="overtimeForm.invalid">
+  </app-button>
+</form>

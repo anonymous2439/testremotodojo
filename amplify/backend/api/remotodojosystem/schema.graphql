@@ -1,0 +1,190 @@
+enum Roles {
+  ADMIN
+  STAFF
+  HR
+  CLIENT
+}
+
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+  TERMINATED
+}
+
+enum JobPositions {
+  FULLSTACK
+  FRONTEND
+  BACKEND
+  IOS_DEVELOPER
+  SWIFT
+  FULLSTACK_MERN
+  FULLSTACK_MEAN
+  RUBY_ON_RAILS
+  NODEJS
+  PYTHON_DJANGO
+  PHP
+}
+
+# enum JOBSchedule {
+#   FULLTIME
+#   PART_TIME
+#   SHIFTS
+#   MID_SHIFT
+#   HOURLY
+#   PROJECT
+# }
+
+enum JobTypes {
+  FULLTIME
+  PART_TIME
+  SHIFTING
+  MID_SHIFT
+  HOURLY
+  PROJECT
+}
+
+enum PositionLevels {
+  SENIOR
+  MID
+  JUNIOR
+}
+
+type S3Object {
+  bucket: String!
+  region: String!
+  key: String!
+}
+
+type AppUser
+  @model
+  @auth(rules: [{ allow: owner, queries: null }])
+  @key(name: "byEmail", fields: ["email"], queryField: "appUserByEmail") {
+  id: ID!
+  firstName: String
+  lastName: String
+  email: String!
+  phone: String
+  role: Roles
+  userStatus: UserStatus
+  iAgree: Boolean
+  profilePics: [ProfilePics] @connection(keyName: "byAppUser", fields: ["id"])
+  createdAt: String
+}
+
+type ProfilePics
+  @model
+  @auth(rules: [{ allow: owner, queries: null }])
+  @key(name: "byAppUser", fields: ["appUserId"])
+  @key(name: "byProfilePicsId", fields: ["id", "createdAt"]) {
+  id: ID!
+  appUserId: ID!
+  appUser: AppUser @connection(fields: ["appUserId"])
+  name: String!
+  file: S3Object
+  default: Boolean
+  createdAt: String
+}
+
+type RequestAccess
+  @model
+  @key(
+    name: "byRequestEmail"
+    fields: ["email"]
+    queryField: "requestAccessByEmail"
+  ) {
+  id: ID
+  firstName: String
+  lastName: String
+  email: String!
+  phone: String
+  companyName: String
+  iPolicy: Boolean
+  iNews: Boolean
+  createdAt: String
+}
+
+type WebContactUs
+  @model
+  @key(
+    name: "byWebCtaEmail"
+    fields: ["email"]
+    queryField: "contactUsByEmail"
+  ) {
+  id: ID
+  firstName: String
+  lastName: String
+  email: String!
+  phone: String
+  service: String
+  message: String
+  createdAt: String
+}
+
+type BusinessAnglesContactUs
+  @model
+  @key(
+    name: "byAngelsEmail"
+    fields: ["email"]
+    queryField: "businessAnglesByEmail"
+  ) {
+  id: ID
+  firstName: String
+  lastName: String
+  email: String!
+  phone: String
+  startUpName: String
+  aboutCompany: String
+  createdAt: String
+}
+
+type CandidateLead
+  @model
+  @key(
+    name: "byCandidateEmail"
+    fields: ["email"]
+    queryField: "candidateLeadByEmail"
+  )
+  @key(
+    name: "byCandidatePosition"
+    fields: ["position", "createdAt"]
+    queryField: "candidateLeadByPosition"
+  )
+  @key(
+    name: "byCandidatePositionType"
+    fields: ["positionType", "createdAt"]
+    queryField: "candidateLeadByType"
+  )
+  @key(
+    name: "byCandidatePositionLevel"
+    fields: ["positionLevel", "createdAt"]
+    queryField: "candidateLeadByLevel"
+  ) {
+  id: ID
+  firstName: String
+  lastName: String
+  email: String!
+  phone: String
+  address: String
+  country: String
+  positionTitle: String
+  position: JobPositions
+  positionType: JobTypes
+  positionLevel: PositionLevels
+  heardAboutOffer: String
+  resume: [CandidateResume]
+    @connection(keyName: "byCandidateResume", fields: ["id"])
+  createdAt: String
+}
+
+type CandidateResume
+  @model
+  @key(name: "byCandidateResume", fields: ["candidateId"])
+  @key(name: "byCandidateResumeId", fields: ["id", "createdAt"]) {
+  id: ID!
+  candidateId: ID!
+  candidate: CandidateLead @connection(fields: ["candidateId"])
+  name: String!
+  file: S3Object
+  createdAt: String
+}

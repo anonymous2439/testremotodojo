@@ -1,0 +1,128 @@
+.section-1-wrapper {
+  background: url("../../../../assets/banners/about-banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000;
+
+  .section-1 {
+    @apply pt-40 pb-20 lg:py-40;
+
+    .account-title {
+      @apply text-primary;
+      @apply text-base;
+      @apply text-center;
+      @apply font-semibold;
+    }
+
+    .account-subtitle {
+      @apply text-3xl;
+      @apply lg:text-6xl;
+      @apply text-white;
+      @apply text-center;
+      @apply font-bold;
+    }
+
+    .account-desc {
+      @apply text-white;
+      @apply text-center;
+      @apply w-full;
+      @apply lg:w-2/4;
+      @apply font-light;
+      @apply mx-0;
+      @apply lg:mx-auto;
+    }
+  }
+}
+
+.section-2-wrapper {
+  @apply bg-black;
+
+  .section-2 {
+    @apply pt-10 lg:pt-20;
+    @apply px-4 lg:px-0;
+  }
+}
+
+.section-content {
+  @apply w-full;
+
+  @apply mx-auto;
+
+  max-width: 650px;
+}
+
+.login-container {
+  @apply block bg-white rounded-t-md w-full;
+  @apply rounded-xl;
+  @apply shadow-xl;
+  @apply overflow-hidden;
+
+  .login-form-container {
+    @apply p-8;
+
+    .form {
+      @apply flex;
+      @apply flex-col;
+      @apply gap-2;
+
+      &::ng-deep.mat-checkbox-layout {
+        @apply whitespace-normal;
+      }
+
+      button {
+        @apply mt-5;
+        @apply w-full;
+
+        @apply md:w-fit;
+      }
+
+      input {
+        @apply text-base;
+      }
+    }
+
+    .form-title,
+    .form-btn,
+    .forgot-password {
+      @apply flex flex-col justify-center items-center;
+    }
+
+    .form-title {
+      @apply text-3xl pb-8 font-bold;
+    }
+
+    .forgot-password {
+      @apply pt-4;
+    }
+  }
+
+  .register-container {
+    @apply block w-full py-8;
+    @apply bg-primary2;
+    .register-content {
+      @apply justify-center items-center text-white;
+      @apply px-5;
+      @apply space-y-4;
+
+      .register-title,
+      .register-tell-us,
+      .register-btn {
+        @apply flex justify-center;
+      }
+
+      .register-title {
+        @apply text-3xl font-bold;
+      }
+
+      .register-tell-us {
+        @apply text-base;
+      }
+
+      .register-btn {
+        @apply pt-4;
+      }
+    }
+  }
+}

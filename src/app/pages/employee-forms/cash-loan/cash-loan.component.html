@@ -1,0 +1,130 @@
+<form name="cash-loan" [formGroup]="cashLoanForm" (submit)="cashLoan($event)">
+  <h1>Cash Loan</h1>
+  <div class="first-section">
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" type="name" name="name">
+        <mat-error>Name is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Date</mat-label>
+        <input matInput formControlName="date" type="date" name="date">
+        <mat-error>Date is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Amount</mat-label>
+        <input matInput formControlName="amount" type="number" name="amount">
+        <mat-error>Amount is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Department</mat-label>
+        <input matInput formControlName="department" type="text" name="department">
+        <mat-error>Department is required.</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width" appea sdrance="fill">
+      <mat-label>Reason</mat-label>
+      <textarea formControlName="reason" name="reason" matInput></textarea>
+      <mat-error>Reason is required.</mat-error>
+    </mat-form-field>
+  </div>
+  <div class="first-section">
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Payment Terms</mat-label>
+        <input matInput formControlName="paymentTerms" type="text" name="paymentTerms">
+        <mat-error>Payment Terms is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Date Of Cash Loan Needed</mat-label>
+        <input matInput formControlName="dateOfCashLoanNeeded" type="date" name="dateOfCashLoanNeeded">
+        <mat-error>Date Of Cash Loan Needed is required.</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="second-section">
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Amount Payroll Deduction</mat-label>
+        <input matInput formControlName="amountOfPayrollDeduction" type="number" name="amountOfPayrollDeduction">
+        <mat-error>Amount Payroll Deduction is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Do You Have An Existing Balance</mat-label>
+        <input matInput formControlName="doYouHaveAnExistingBalance" type="text" name="doYouHaveAnExistingBalance">
+        <mat-error>Do You Have An Existing Balance is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Loan Balance</mat-label>
+        <input matInput formControlName="loanBalance" type="number" name="loanBalance">
+        <mat-error>Loan Balance is required.</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="flex justify-between">
+    <div class="w-2/5">
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Borrower's Signature</mat-label>
+        <input matInput formControlName="borrowersSignature" type="text" name="borrowersSignature">
+        <mat-error>Borrower's Signature is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <p class="text-right">
+        <span>ENDORSED BY:</span> <br />
+        <span class="font-bold underline">FLORAMIE FELDSTEIN</span> <br />
+        General Manager
+      </p>
+    </div>
+  </div>
+  <div>
+    <p>APPROVED BY:</p>
+  </div>
+  <div class="flex justify-between">
+    <div>
+      <p>
+        <span class="font-bold underline">LEON FEDRO</span> <br />
+        CEO/President
+      </p>
+    </div>
+    <div>
+      <p class="text-right">
+        <span class="font-bold underline">LINDSAY CLARK</span> <br />
+        CFO/Vice-President
+      </p>
+    </div>
+  </div>
+  <div class="flex justify-between mt-5">
+    <div class="w-2/5">
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Released By</mat-label>
+        <input matInput formControlName="name" type="text" name="releasedBy">
+        <mat-error>Name is required.</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <p class="text-right">
+        <span>RECEIVED BY:</span> <br />
+        <span class="font-bold underline">FLORAMIE FELDSTEIN</span> <br />
+        Accounting Manager
+      </p>
+    </div>
+  </div>
+  <app-button [isSubmit]="true" [isResponsive]="true" class="w-full" [isDisabled]="cashLoanForm.invalid">
+  </app-button>
+</form>

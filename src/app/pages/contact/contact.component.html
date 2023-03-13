@@ -1,0 +1,157 @@
+<div class="section contact" id="contact-page">
+  <div class="section-1-wrapper py-14 lg:py-20 px-8">
+    <div class="section-container section-1 text-center space-y-6">
+      <div class="contact-section-subtitle"><h3>Contact Us</h3></div>
+      <div class="contact-section-title"><h1>Let's get Started!</h1></div>
+      <div class="contact-section-desc">
+        You can call us at any time to discuss your needs. To assist you better, setting up a meeting is the first step.
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="contact-2nd-section">
+  <div class="contact-2nd-section-inner-wrapper">
+    <form class="form order-2 sm:order-1" [formGroup]="form" (ngSubmit)="submitForm()" name="contact">
+      <mat-form-field appearance="outline">
+        <mat-label>Select a service *</mat-label>
+        <mat-select class="font-Raleway" formControlName="service" name="service">
+          <mat-optgroup *ngFor="let service of serviceOffer" [label]="service.option">
+            <mat-option *ngFor="let service of service.service" [value]="service.name">
+              {{ service.value }}
+            </mat-option>
+          </mat-optgroup>
+        </mat-select>
+
+        <mat-error>Please select a service.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>First Name *</mat-label>
+        <input matInput formControlName="firstName" />
+
+        <mat-error>First name is required.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>E-mail Address *</mat-label>
+        <input matInput formControlName="email" />
+
+        <mat-error>E-mail is required.</mat-error>
+      </mat-form-field>
+
+      <div class="grid grid-cols-3 gap-4">
+        <mat-form-field appearance="outline">
+          <mat-label>Country Code *</mat-label>
+          <mat-select formControlName="countryCode">
+            <mat-option *ngFor="let country of countriesData" [value]="country.dial_code">
+              {{ country.code }} ({{ country.dial_code }})
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="col-span-2" appearance="outline">
+          <mat-label>Phone *</mat-label>
+          <input matInput type="text" placeholder="Ex. 0999 999 9999" formControlName="contactNo" />
+
+          <mat-error>Contact number is required.</mat-error>
+        </mat-form-field>
+      </div>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Message</mat-label>
+        <input matInput formControlName="message" />
+      </mat-form-field>
+
+      <div class="flex justify-center w-full mt-4">
+        <app-button [isSubmit]="true" [isDisabled]="form.invalid" [isResponsive]="true">
+        </app-button>
+      </div>
+    </form>
+
+    <div class="desc order-1 sm:order-2">
+      <h2><p class="contact-section-title-v2 mb-8">
+        Get your needs satisfied and ideas realized.
+      </p></h2>
+      <p class="contact-section-desc-v2">
+        RemotoDojo is always available and open for free consultations and inquiries. Contact us for anything related to
+        BPO and IT industries. The RemotoDojo team can address and will take your companies into a new business
+        landscape.
+      </p>
+      <div class="mt-10">
+        <img src="../../../assets/widgets/contact-feature.svg" alt="Feature" />
+      </div>
+
+      <!-- <div class="contact-number-wrapper grid grid-cols-1 lg:grid-cols-2 gap-y-6 mt-5">
+        <div>
+          <div class="flex flex-row items-center space-x-2 mb-4">
+            <div class="text-2xl font-semibold text-white">
+              <h3>Contact Numbers</h3>
+            </div>
+            <div>
+              <img src="../../../assets/icons/contact-v4.svg" alt="Contact Icon" />
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-white">
+              <a href="tel:+61411069447">+61 411 069 447 (AU)</a>
+            </span>
+            <span class="text-white">
+              <a href="tel:+16505074870">+1 (650) 507 4870 (USA)</a>
+            </span>
+            <span class="text-white">
+              <a href="tel:+442030342160">+44 2030 342160 (UK)</a>
+            </span>
+            <span class="text-white">
+              <a href="tel:+639204743207"> +63 920 474 3207 (PH)</a>
+            </span>
+            <span class="text-white">
+              <a href="tel:+0323445835">(032) 344-5835 (PH Landline)</a>
+            </span>
+          </div>
+        </div>
+        <div>
+          <div class="flex flex-row items-center space-x-2 mb-4">
+            <div class="text-2xl font-semibold text-white">
+              <h3>Email Address</h3>
+            </div>
+            <div>
+              <img src="../../../assets/icons/message-v4.svg" alt="Contact Icon" />
+            </div>
+          </div>
+          <div class="text-white">
+            <a href="mailto:sales@remotodojo.com">
+              sales@remotodojo.com
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-number-wrapper mt-5">
+        <div class="flex flex-row items-center space-x-2 mb-4">
+          <div class="text-2xl font-semibold text-white">
+            <h3>Address</h3>
+          </div>
+          <div>
+            <img src="../../../assets/icons/address-v4.svg" alt="Contact Icon" />
+          </div>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <span class="text-white">
+            <span class="font-semibold">Philippines</span><br />
+            <a
+              href="https://www.google.com/maps/place/RemotoDojo+Inc./@10.3469648,123.9269557,15z/data=!4m2!3m1!1s0x0:0x5d98bffff7203bd4?sa=X&ved=2ahUKEwjG8fL9wdr7AhUor1YBHTZlCSAQ_BJ6BAhmEAg">
+              Support BPO Bldg., Hernan Cortes, Mandaue City, Cebu, PH 6014
+            </a>
+          </span>
+          <span class="text-white">
+            <span class="font-semibold">New York</span> <br />
+            442 5th Avenue #1495, Manhattan NY 10018
+          </span>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<app-alert-popup *ngIf="showSuccessAlert" [data]="successAlert" (close)="closeAlertPopup()"></app-alert-popup>

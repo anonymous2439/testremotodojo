@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="447.697" viewBox="0 0 1920 447.697">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#212429"/>
+      <stop offset="1" stop-color="#1a4bb7"/>
+    </linearGradient>
+  </defs>
+  <path id="Inner_Blog_-_header_bg" data-name="Inner Blog - header bg" d="M0-76H1920V347.973S1683.43,371.7,1375.893,371.7c-153.461,0-347.914-34.574-700.152-43.219S0,347.762,0,347.762Z" transform="translate(0 76)" fill="url(#linear-gradient)"/>
+</svg>

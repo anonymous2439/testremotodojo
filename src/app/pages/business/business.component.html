@@ -1,0 +1,184 @@
+<div class="section first-section section-1" [id]="fragment.business">
+  <div class="section-container row responsive padded">
+    <div class="landing space-y-4">
+      <h2><span class="business-section-subtitle">Business Angels</span></h2>
+      <h1><span class="business-section-title">Jump-Start Your Business</span></h1>
+      <span class="business-section-desc">
+        We are the product of the Business Angels. RemotoDojo would not be here were it not for them and we are also
+        just as eager to introduce them to the next generation of entrepreneurs.
+      </span>
+      <app-button text="GET STARTED" [isResponsive]="true" [routerLink]="routers.Business"
+        [fragment]="fragment.getInTouch"></app-button>
+    </div>
+
+    <div class="landing-graphic">
+      <img src="./../../../assets/banners/business-angels-featured-img-v4.png" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="section section-2" [id]="fragment.grow">
+  <div class="section-container row reverse-col padded">
+    <div class="grow-business-graphic">
+      <div class="graphic">
+        <div class="group rounded-xl">
+          <div class="overlay-desc"><span>{{ growDesc }}</span></div>
+          <img src="./../../../assets/banners/grow-your-business-featured-v2.png" alt="">
+        </div>
+      </div>
+
+      <div class="items">
+        <button class="connections-btn" (mouseenter)="hoverGrowBusiness(growConnections)"
+          (mouseleave)="removeGrowOverlay()">
+          CONNECTIONS
+        </button>
+        <button class="funding-btn" (mouseenter)="hoverGrowBusiness(growFunding)" (mouseleave)="removeGrowOverlay()">
+          FUNDING
+        </button>
+        <button class="mentoring-btn" (mouseenter)="hoverGrowBusiness(growMentoring)"
+          (mouseleave)="removeGrowOverlay()">
+          MENTORING
+        </button>
+      </div>
+    </div>
+
+    <div class="grow-business-desc">
+      <div class="business-section-subtitle">
+        <h3>Grow Your Business</h3>
+      </div>
+      <div class="business-section-title">
+        <h2>You Deserve All The Support To Start!</h2>
+      </div>
+      <div class="business-section-desc">
+        Our network of Business Angels has all your bases covered, whether it's helping aspiring entrepreneurs make
+        their connections, arranging to fund, or even organizing mentoring from seasoned management veterans.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="business-angel-wrapper">
+  <div class="business-angel-container">
+    <div class="text order-2 sm:order-1">
+      We are the product of the Business Angels. RemotoDojo would not be here were it not for them and we are also just
+      as eager to introduce them to the next generation of entrepreneurs.
+      <br />
+      <br />
+      Contact us and take the first step in your journey to 21st-century success!
+
+      <app-button class="mt-8" text="GET STARTED" [isResponsive]="true" [routerLink]="routers.Business"
+        [fragment]="fragment.getInTouch"></app-button>
+    </div>
+    <div class="feature-img order-1 sm:order-2">
+      <img src="../../../assets/widgets/opaque-doji-logo-v4.svg" alt="Business Feature" />
+    </div>
+  </div>
+</div>
+
+<div class="advantages-bg" [id]="fragment.advantages">
+  <div class="section section-4">
+    <div class="section-container col padded">
+      <div class="advantages-desc">
+        <div class="business-section-subtitle-v2">
+          <h3>Advantages</h3>
+        </div>
+        <div class="business-section-title-v2">
+          <h2>Start With Everything You Need!</h2>
+        </div>
+      </div>
+      <div class="advantages-list">
+        <div class="">
+          <div *ngFor="let advantage of advantagesCol1">
+            <div class="h-4"></div>
+            <app-collapse-card [data]="advantage"></app-collapse-card>
+          </div>
+        </div>
+        <div class="">
+          <div *ngFor="let advantage of advantagesCol2">
+            <div class="h-4"></div>
+            <app-collapse-card [data]="advantage"></app-collapse-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section section-5" [id]="fragment.getInTouch">
+  <div class="px-4 grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-screen-xl mx-auto">
+
+    <div class="get-in-touch-graphic">
+      <div class="business-section-subtitle">Keep in touch</div>
+      <div class="business-section-title">Pitch and make it happen!</div>
+      <div class="business-section-desc">
+        Get the courage to share your idea with the world. Talk to our Business Angels and make things happen. Our
+        network gives you a wider range of business leaders and technical experts who can help your idea find its
+        place. We will help you go far in the industry that you wish for!
+      </div>
+      <img src="./../../../assets/banners/keep-in-touch-featured-img-v4.svg" class="hidden lg:block">
+    </div>
+
+    <form class="get-in-touch-form" [formGroup]="form" (ngSubmit)="submitForm(form.value)">
+      <div class="text-black font-bold text-lg mb-4">
+        Get your ideas realized.
+      </div>
+      <mat-form-field appearance="outline">
+        <mat-label>First Name *</mat-label>
+        <input matInput formControlName="firstName">
+
+        <mat-error>First name is required.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Last Name *</mat-label>
+        <input matInput formControlName="lastName">
+
+        <mat-error>Last name is required.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Start Up Name *</mat-label>
+        <input matInput formControlName="startUpName">
+
+        <mat-error>Start up name is required.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>E-mail Address *</mat-label>
+        <input matInput formControlName="email">
+
+        <mat-error>E-mail address is required.</mat-error>
+      </mat-form-field>
+
+      <div class="grid grid-cols-3 gap-3">
+        <mat-form-field appearance="outline">
+          <mat-label>Country Code *</mat-label>
+          <mat-select formControlName="countryCode">
+            <mat-option *ngFor="let country of countriesData" [value]="country.dial_code">{{country.code}} ({{
+              country.dial_code }})</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="col-span-2">
+          <mat-label>Phone *</mat-label>
+          <input matInput type="text" placeholder="Ex. 0999 999 9999" formControlName="contactNo">
+
+          <mat-error>Contact number is required.</mat-error>
+        </mat-form-field>
+      </div>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Tell us about your company</mat-label>
+        <input matInput formControlName="comment">
+      </mat-form-field>
+
+      <div class="flex justify-center w-full mt-4">
+        <app-button class="w-full" [isSubmit]="true" [isDisabled]="form.invalid" [isLoading]="loading"
+          [isResponsive]="true">
+        </app-button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-alert-popup *ngIf="showSuccessAlert" [data]="successAlert" (close)="closeAlertPopup()"></app-alert-popup>

@@ -1,0 +1,74 @@
+.btn {
+  @apply bg-primary2;
+  @apply duration-300;
+  @apply transform;
+  @apply text-xs;
+  @apply hover:scale-105;
+  @apply md:hover:scale-110;
+  @apply hover:shadow;
+  @apply w-fit;
+  @apply font-bold;
+
+  span {
+    color: white;
+  }
+
+  &.btn-full {
+    @apply w-full;
+  }
+
+  &.btn-primary,
+  &.btn-basic {
+    @apply px-5;
+    @apply py-3;
+    @apply rounded-none;
+    @apply shadow-2xl;
+
+    &.no-x-padding {
+      @apply px-0;
+    }
+  }
+
+  &.btn-primary {
+    @apply bg-primary2;
+    @apply text-white;
+    @apply rounded-md;
+    @apply shadow-2xl;
+  }
+  &.btn-basic {
+    @apply text-primary2;
+    @apply bg-white;
+    @apply shadow-2xl;
+    @apply rounded-md;
+
+    span {
+      @apply text-primary2;
+    }
+  }
+
+  &.btn-right {
+    @apply float-right;
+  }
+
+  &.btn-outlined {
+    @apply border;
+    @apply border-primary2;
+  }
+
+  &.btn-large {
+    @apply text-sm;
+  }
+
+  &.btn-responsive {
+    @apply w-full;
+    @apply md:w-fit;
+  }
+
+  &.btn-disabled {
+    @apply text-black;
+    @apply bg-inactive;
+    @apply pointer-events-none;
+    @apply cursor-not-allowed;
+    @apply rounded-none;
+  }
+}

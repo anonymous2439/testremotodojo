@@ -1,0 +1,128 @@
+.section-1-wrapper {
+  background: url("../../../../assets/banners/about-banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000;
+
+  .section-1 {
+    @apply pt-40 pb-20 lg:py-40;
+
+    .account-title {
+      @apply text-primary;
+      @apply text-base;
+      @apply text-center;
+      @apply font-semibold;
+    }
+
+    .account-subtitle {
+      @apply text-3xl;
+      @apply lg:text-6xl;
+      @apply text-white;
+      @apply text-center;
+      @apply font-bold;
+    }
+
+    .account-desc {
+      @apply text-white;
+      @apply text-center;
+      @apply w-full;
+      @apply lg:w-2/4;
+      @apply font-light;
+      @apply mx-0;
+      @apply lg:mx-auto;
+    }
+  }
+}
+
+.section-2-wrapper {
+  @apply bg-black;
+
+  .section-2 {
+    @apply pt-10 lg:pt-20;
+    @apply px-4 lg:px-0;
+  }
+}
+
+.section-content {
+  @apply overflow-hidden;
+  @apply rounded-xl;
+  @apply shadow-xl;
+  @apply w-full;
+  @apply text-center;
+  @apply mx-auto;
+
+  max-width: 650px;
+  font-family: "Raleway";
+}
+
+.register-container {
+  @apply bg-white;
+  @apply p-4;
+
+  @apply md:p-8;
+
+  .form-title,
+  .form-btn,
+  .forgot-password {
+    @apply flex justify-center;
+  }
+
+  .form-title {
+    @apply text-2xl pb-8 font-bold;
+  }
+
+  .forgot-password {
+    @apply pt-4;
+  }
+
+  & > form {
+    @apply flex;
+    @apply flex-col;
+    @apply gap-2;
+
+    &::ng-deep.mat-checkbox-layout {
+      @apply whitespace-normal;
+    }
+
+    button {
+      @apply mt-5;
+      @apply w-full;
+
+      @apply md:w-fit;
+    }
+
+    input {
+      @apply text-base;
+    }
+  }
+}
+
+.login-container {
+  @apply block w-full py-8 px-5 bg-primary2;
+
+  .login-content {
+    @apply justify-center items-center text-white;
+
+    .login-title,
+    .login-tell-us,
+    .login-btn {
+      @apply flex justify-center;
+      @apply text-base;
+    }
+
+    .login-title {
+      @apply text-3xl font-bold;
+    }
+    .login-btn {
+      @apply pt-4;
+    }
+
+    .login-tell-us {
+      @apply text-2xl;
+      @apply font-semibold;
+      @apply tracking-wider;
+    }
+  }
+}

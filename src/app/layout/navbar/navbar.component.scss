@@ -1,0 +1,297 @@
+.navbar-on-scroll {
+  background: #2368ff !important;
+
+  .logo-container-desktop {
+    @apply hidden;
+  }
+
+  .logo-container-mobile {
+    display: block !important;
+  }
+
+  .menu {
+    @apply text-white;
+
+    .active {
+      border-bottom: 3px solid #ffffff !important;
+      font-weight: 600;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+  }
+
+  .on-scroll-btn {
+    color: #2368ff !important;
+    background-color: #ffffff !important;
+  }
+
+  .toggle-btn {
+    .fill-on-scroll {
+      color: #ffffff !important;
+    }
+  }
+}
+
+.navbar-wrapper {
+  @apply fixed;
+  @apply top-0;
+  @apply w-full;
+  @apply z-50;
+  @apply bg-white;
+}
+
+.navbar {
+  @apply text-inactive;
+  @apply font-medium;
+  @apply flex;
+  @apply justify-between;
+  @apply my-5;
+  @apply mx-4;
+  @apply items-center;
+
+  .nav-btn {
+    @apply bg-primary2;
+    @apply text-white;
+    @apply py-4 px-8;
+    @apply rounded-lg;
+  }
+
+  .beta-shadow {
+    @apply z-10;
+    @apply top-0;
+    @apply absolute;
+    filter: drop-shadow(0px 15px 20px #1a4bb71a);
+
+    .beta-badge {
+      clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+
+      @apply transform;
+      @apply duration-300;
+      @apply bg-white;
+      @apply w-12;
+      @apply h-8;
+      @apply text-center;
+      @apply text-xs;
+      @apply text-primary;
+      @apply font-bold;
+      @apply shadow;
+      @apply p-2;
+
+      padding-top: 0.4rem;
+
+      @apply lg:w-14;
+      @apply lg:h-10;
+      @apply lg:text-sm;
+
+      @media (min-width: 1024px) {
+        padding-top: 0.45rem;
+      }
+    }
+  }
+
+  .navigator {
+    @apply hidden;
+    @apply lg:flex;
+    @apply items-center;
+    @apply md:gap-4;
+    @apply lg:gap-8;
+    @apply relative;
+
+    .active {
+      border-bottom: 3px solid #2368ff;
+      font-weight: 600;
+
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+  }
+
+  .logo-container {
+    @apply ml-1 md:ml-6;
+    @apply transform;
+    @apply duration-300;
+    @apply w-28 sm:w-40;
+    @apply flex;
+    @apply items-center;
+    @apply justify-center;
+    @apply cursor-pointer;
+
+    .logo-container-mobile {
+      @apply hidden;
+      img {
+        @apply w-full;
+      }
+    }
+  }
+
+  .toggle-btn {
+    @apply px-2;
+    @apply lg:hidden;
+  }
+}
+
+.avatar {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply w-6;
+  @apply h-6;
+  @apply overflow-hidden;
+  @apply bg-gray-500;
+  @apply rounded-full;
+  @apply cursor-pointer;
+  @apply p-2;
+
+  /* DESKTOP */
+  @apply lg:w-10;
+  @apply lg:h-10;
+  @apply lg:p-3;
+
+  & > img {
+    @apply flex-none;
+  }
+}
+
+.menu {
+  @apply relative;
+  @apply h-full;
+
+  button {
+    @apply h-full;
+  }
+}
+
+.sub-menu {
+  @apply absolute;
+  @apply right-0;
+  @apply bg-white;
+  @apply rounded;
+  @apply text-black;
+  @apply w-40;
+  @apply rounded-md;
+  @apply shadow-lg;
+  @apply invisible;
+  @apply opacity-0;
+  @apply transform;
+  @apply duration-200;
+  @apply group-hover:visible;
+  @apply group-hover:opacity-100;
+  @apply group-hover:translate-y-3;
+  @apply top-10;
+  box-shadow: 0px 1px 6px 2px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 1px 6px 2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 1px 6px 2px rgba(0, 0, 0, 0.25);
+
+  li {
+    @apply py-2;
+    @apply px-4;
+    @apply cursor-pointer;
+    @apply hover:bg-primary2;
+    @apply hover:text-white;
+  }
+}
+
+.login-btn {
+  @apply w-40;
+}
+
+.dj-overlay {
+  z-index: 49;
+
+  @apply lg:hidden;
+
+  .nav-mobile {
+    @apply bg-white;
+    @apply h-full;
+    @apply w-full;
+
+    .border {
+      z-index: 99;
+
+      @apply fixed;
+      @apply top-0;
+      @apply h-full;
+      @apply w-full;
+      @apply pointer-events-none;
+    }
+
+    .close-btn {
+      button {
+        @apply text-xl;
+        @apply h-7;
+        @apply w-7;
+        @apply my-6;
+      }
+    }
+
+    .content {
+      height: 100%;
+
+      @apply overflow-auto;
+
+      & > .menu-mobile {
+        @apply flex;
+        @apply flex-col;
+        @apply p-2;
+        @apply w-full;
+        @apply mt-24;
+
+        li {
+          @apply cursor-pointer;
+          border: 1px solid #00000024;
+          @apply mb-2;
+          @apply rounded-lg;
+          @apply shadow-lg;
+          @apply py-4;
+
+          & > .title {
+            @apply flex;
+            @apply gap-4;
+            @apply justify-between;
+            @apply px-4;
+            @apply font-medium;
+
+            & > div {
+              @apply flex;
+              @apply items-center;
+              @apply gap-4;
+
+              & > span {
+                @apply w-4;
+              }
+            }
+          }
+        }
+
+        .sub-mobile {
+          @apply transform;
+          @apply duration-100;
+          @apply max-h-0;
+          @apply overflow-hidden;
+          @apply opacity-0;
+
+          li {
+            @apply shadow-none;
+            @apply mb-0;
+            @apply border-none;
+            @apply rounded-none;
+            @apply py-0;
+
+            .title {
+              @apply border-b;
+              @apply border-primary2fade;
+              @apply pl-8;
+              @apply py-4;
+            }
+          }
+
+          &.collapsed {
+            @apply duration-500;
+            @apply max-h-screen;
+            @apply opacity-100;
+          }
+        }
+      }
+    }
+  }
+}

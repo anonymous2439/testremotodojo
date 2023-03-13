@@ -1,0 +1,70 @@
+.section {
+  @apply py-20 lg:py-40;
+
+  .section-container {
+    .container {
+      @apply bg-white;
+      @apply rounded-xl;
+      @apply shadow-xl;
+      @apply p-5;
+
+      /* DESKTOP */
+      @apply md:p-10;
+
+      .application-desc {
+        @apply flex;
+        @apply flex-col;
+        @apply gap-2;
+        @apply items-center;
+
+        /* DESKTOP */
+        @apply md:items-start;
+
+        & > * {
+          @apply text-center;
+
+          /* DESKTOP */
+          @apply md:text-left;
+        }
+      }
+
+      form {
+        @apply mt-5;
+        @apply gap-4;
+        @apply text-sm;
+        @apply flex;
+        @apply flex-col;
+
+        /* DESKTOP */
+        @apply lg:grid;
+        @apply lg:grid-cols-2;
+      }
+
+      .actions {
+        @apply flex;
+        @apply flex-col;
+        @apply justify-between;
+        @apply gap-8;
+        @apply mt-4;
+        @apply col-span-2;
+
+        @apply sm:flex-row;
+
+        .btn {
+          @apply w-full md:w-fit;
+          @apply px-3;
+        }
+
+        .upload-file {
+          @apply flex;
+          @apply flex-col;
+          @apply items-center;
+          @apply flex-auto;
+          @apply gap-4;
+          @apply text-base;
+          @apply sm:flex-row;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="651.975" viewBox="0 0 1920 651.975">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.907" y1="0.787" x2="0.898" y2="-0.011" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1a4bb7"/>
+      <stop offset="1" stop-color="#212429"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <path id="Path_321" data-name="Path 321" d="M-24929-24818v487.729s241.322-34.574,554.654,21.609,458.119,153.426,812.51,140.461,552.836-140.461,552.836-140.461V-24818Z" transform="translate(24929 24918)" fill="url(#linear-gradient)"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Path_358" data-name="Path 358" d="M-24929-24819v488.729s241.322-34.574,554.654,21.609,458.119,153.426,812.51,140.461,552.836-140.461,552.836-140.461V-24819Z" transform="translate(24929 24918)" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="Login_-_bg" data-name="Login - bg" transform="translate(0 -99)">
+    <path id="Path_3" data-name="Path 3" d="M-24929-24819v488.729s241.322-34.574,554.654,21.609,458.119,153.426,812.51,140.461,552.836-140.461,552.836-140.461V-24819Z" transform="translate(24929 24918)" fill="url(#linear-gradient)"/>
+    <g id="Mask_Group_15" data-name="Mask Group 15" clip-path="url(#clip-path)" style="mix-blend-mode: overlay;isolation: isolate">
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="161" cy="161" r="161" transform="translate(1467 534)" fill="#fff" opacity="0.5" style="mix-blend-mode: overlay;isolation: isolate"/>
+    </g>
+    <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(929 151)" fill="none" stroke="#fff" stroke-width="2" opacity="0.5" style="mix-blend-mode: overlay;isolation: isolate">
+      <circle cx="97" cy="97" r="97" stroke="none"/>
+      <circle cx="97" cy="97" r="96" fill="none"/>
+    </g>
+    <g id="Mask_Group_20" data-name="Mask Group 20" clip-path="url(#clip-path-2)" style="mix-blend-mode: overlay;isolation: isolate">
+      <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(-32 50)" fill="none" stroke="#fff" stroke-width="2" opacity="0.5" style="mix-blend-mode: overlay;isolation: isolate">
+        <circle cx="89" cy="89" r="89" stroke="none"/>
+        <circle cx="89" cy="89" r="88" fill="none"/>
+      </g>
+    </g>
+    <circle id="Ellipse_3" data-name="Ellipse 3" cx="33" cy="33" r="33" transform="translate(100 167)" fill="#fff" opacity="0.5" style="mix-blend-mode: overlay;isolation: isolate"/>
+  </g>
+</svg>

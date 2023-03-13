@@ -1,0 +1,61 @@
+.alert-popup {
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply p-5;
+
+  & > .alert-container {
+    @apply flex-none;
+    @apply bg-white;
+    @apply shadow-xl;
+    @apply rounded-xl;
+    @apply w-full;
+    @apply p-5;
+    @apply mt-40;
+    @apply flex;
+    @apply flex-col;
+    @apply gap-5;
+    @apply text-gray-800;
+
+    min-height: 300px;
+    max-width: 300px;
+
+    & > .alert-close {
+      @apply w-full;
+
+      & > button {
+        @apply float-right;
+        @apply rounded-full;
+        @apply bg-primary;
+        @apply text-white;
+        @apply h-8;
+        @apply w-8;
+      }
+    }
+
+    & > .alert-icon {
+      @apply w-28;
+      @apply self-center;
+      @apply transform;
+      @apply duration-300;
+
+      min-height: 100px;
+    }
+
+    & > .alert-title {
+      @apply uppercase;
+      @apply font-bold;
+      @apply text-xl;
+      @apply text-primary;
+      @apply self-center;
+
+      font-family: "Raleway";
+    }
+
+    & > .alert-description {
+      @apply text-xs;
+      @apply text-gray-600;
+      @apply text-center;
+    }
+  }
+}

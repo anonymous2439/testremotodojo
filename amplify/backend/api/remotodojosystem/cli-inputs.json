@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "remotodojosystem",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/lawdev/Projects/react-projects/remoto-dojo-system/amplify/backend/api/remotodojosystem/schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AMAZON_COGNITO_USER_POOLS",
+        "cognitoUserPoolId": "authremotodojosystem1aa0d2da"
+      }
+    ]
+  }
+}

@@ -1,0 +1,410 @@
+<div class="home" [id]="fragment.home">
+  <div id="banner-section" class="banner-outer-section">
+    <div class="banner-inner-section">
+      <div class="banner-featured">
+        <img src="../../../../assets/banners/banner-feature-v3.svg" alt="Banner Feature" />
+      </div>
+      <div class="banner-details">
+        <div>
+          <h2><b>Welcome to RemotoDojo</b></h2>
+        </div>
+        <div>
+          <h1>Your Remote Arena</h1>
+        </div>
+        <div>
+          We’re your IT and BPO outsourcing company. Offshore service expert for your business landscapes.
+      </div>
+        <div>
+          <img src="../../../../assets/banners/banner-feature-v3.svg" alt="Banner Feature" />
+        </div>
+        <div>
+          <app-button text="Build your team now!" size="sm" [routerLink]="routers.Contact">
+          </app-button>
+        </div>
+        <div>
+          <span>
+            <img src="../../../../assets/icons/facebook-v3.svg" (click)="facebook()" alt="Facebook">
+          </span>
+          <span>
+            <img src="../../../../assets/icons/linkedin-v4.svg" (click)="linkedin()" alt="LinkedIn">
+          </span>
+          <span>
+            <img src="../../../../assets/icons/youtube-v3.svg" (click)="youtube()" alt="Youtube">
+          </span>
+          <span>
+            <img src="../../../../assets/icons/twitter-v3.svg" (click)="twitter()" alt="Twitter">
+          </span>
+          <span>
+            <img src="../../../../assets/icons/instagram-v3.svg" (click)="instagram()" alt="Instagram">
+          </span>
+          <span>
+            <img src="../../../../assets/icons/tiktok-v3.svg" (click)="tiktok()" alt="Tiktok">
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section section-2 py-10 lg:py-20" [id]="fragment.services">
+    <div class="section-container row flex-wrap padded">
+      <div class="services-desc">
+        <div class="desc">
+          <div class="space-y-4 mb-10">
+            <div class="section-title text-base lg:text-2xl">
+              <h3>Services</h3>
+            </div>
+            <div class="section-desc text-2xl lg:text-4xl">
+              <h2>What We Provide</h2>
+            </div>
+            <div class="section-content text-base">
+              Ninjas always find ways to help. 100% devoted to hiring remote staff who are the best fit for your business and serve you better. 
+              Hence, RemotoDojo is designed as a one-stop-shop for business process outsourcing (BPO) and information technology (IT) needs.
+              <br />
+              <br />
+              There's no need to worry; everything is right here.
+            </div>
+          </div>
+          <mat-tab-group mat-align-tabs="center" animationDuration="0ms">
+            <mat-tab label="BPO">
+              <div *ngFor="let section of bposervices" class="service-desktop">
+                <div *ngFor="let bposervice of section.bposervices" class="card"
+                  (mouseenter)="selectBPOService(false, bposervice)">
+                  <div>{{ bposervice.name }}</div>
+                </div>
+              </div>
+            </mat-tab>
+            <mat-tab label="IT">
+              <div *ngFor="let section of services" class="service-desktop">
+                <div *ngFor="let service of section.services" class="card" [ngClass]="
+                      selectedBPOService.id === service.id
+                        ? 'border-primary'
+                        : 'border-transparent'
+                    " (mouseenter)="selectBPOService(false, service)">
+                  <div>{{ service.name }}</div>
+                </div>
+              </div>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+      <div class="services-graphic">
+        <div class="graphic-animation">
+          <img [class.hidden]="isTileLoading" [src]="selectedBPOService?.image || selectedService?.image"
+            (load)="isTileLoading = false" />
+        </div>
+        <div class="flex flex-col gap-2 mt-6">
+          <span class="text-lg md:text-2xl font-bold">{{
+              hoveredBPOService?.name || selectedBPOService?.name
+            }}</span>
+          <span class="text-sm md:text-lg leading-loose trackin-normal">{{
+              hoveredBPOService?.description || selectedBPOService?.description
+            }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-3" [id]="fragment.whyUs">
+    <div class="section-container row padded why-us">
+      <div class="graph">
+        <div>
+          <div *ngFor="let loc of whyUs" class="bar">
+            <div class="percent">
+              <img [src]="loc.percentImg" alt="loc.percent">
+            </div>
+            <div class="location">{{ loc.location }}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="desc">
+        <div class="section-title">
+          <h3>Why Us</h3>
+        </div>
+        <div class="section-desc">
+          <h2>Spend Less!</h2>
+        </div>
+        <span class="section-content">
+          RemotoDojo is dedicated and committed to assembling and designing an effective
+          remote team for every business. We can be an extension of your staffing needs as
+          we are the home of highly-skilled BPO and software engineers who can immediately work on your desired projects.
+          <br />
+          <br />
+          Our unique business model for offshoring services provides ideal candidates rapidly and most importantly, 
+          your investment in software development and BPO is worth every penny.
+
+          <br />
+          <br />
+          Though we have low-cost offers, RemotoDojo delivers Western BPO, development, & IT.
+          <br />
+          <br />
+          Our expertise in finding affordable and qualified chat support, customer service, design,
+          digital marketing, lead generation, sales, technical support, virtual assistance, and website development
+          can help your company be more competitive in the industry.
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- START OF STEPS SECTION - V4 -->
+  <div id="steps-section" class="steps-outer-wrapper" [id]="fragment.steps">
+    <div class="steps-inner-wrapper">
+      <!-- STEPS HEADING -->
+      <div class="steps-heading">
+        <div>
+          RemotoDojo believes that every solution has a process. At RemotoDojo, we take every detail seriously that will
+          address clients' needs.
+        </div>
+        <div class="step-checks-mobile">
+          <div class="flex justify-between justify-items-center text-center gap-6">
+            <div *ngFor="let step of steps" (click)="selectStep(false, step, stepCheck)" class="step-checks-mobile">
+              <img [src]="step.check" [alt]="step.name" class="check-img">
+              <div class="text-xs sm:text-sm">
+                {{ step.mobileName }}
+              </div>
+              <div class="text-xs sm:text-sm font-light">
+                Step {{ step.id }}
+              </div>
+            </div>
+          </div>
+          <div class="mt-10">
+            <img class="w-8/12 mx-auto" [class.hidden]="isTileLoading" [src]="selectedStep?.image"
+              (load)="isTileLoading = false">
+            <div class="flex-flex-col gap-2 mt-6 space-y-2">
+              <div class="text-lg md:text-2xl font-bold">
+                {{ hoveredStep?.name || selectedStep?.name }}
+              </div>
+              <div class="text-sm md:text-lg leading-loose tracking-normal font-light">
+                {{ hoveredStep?.description || selectedStep?.description }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- STEPS HEADING -->
+      <!-- STEPS DETAILS -->
+      <div class="hidden sm:block">
+        <div class="steps-steps">
+          <div class="flex flex-col justify-around">
+            <div *ngFor="let step of steps" (click)="selectStep(false, step, stepCheck)" class="flex cursor-pointer">
+              <div class="mr-4">
+                <img [src]="step.check" [alt]="step.name">
+              </div>
+              <div>
+                <div class="text-base md:text-2xl">
+                  {{ step.name }}
+                </div>
+                <div class="font-light text-sm">
+                  Step {{ step.id }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img class="w-4/5 mx-auto" [class.hidden]="isTileLoading" [src]="selectedStep?.image"
+              (load)="isTileLoading = false">
+            <div class="flex-flex-col gap-2 mt-6 space-y-2">
+              <div class="text-lg md:text-2xl font-bold">
+                {{ hoveredStep?.name || selectedStep?.name }}
+              </div>
+              <div class="text-sm md:text-lg leading-loose tracking-normal font-light">
+                {{ hoveredStep?.description || selectedStep?.description }}
+              </div>
+            </div>
+          </div>
+          <!-- STEPS DETAILS -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END OF STEPS SECTION - V4 -->
+
+  <div class="section section-3 section3-5 py-10 lg:py-20" [id]="fragment.pricing">
+    <div class="section-container row padded pricing">
+      <div class="flex space-y-6">
+        <div class="pricing-desc">
+          <div class="space-y-4 lg:space-y-8">
+            <div class="section-title">Pricing</div>
+            <div class="section-desc text-2xl lg:text-4xl">Cost Breakdown</div>
+            <div class="section-content">
+              Every company culture is unique, RemotoDojo can create a dedicated RemotoDojo team that can be adaptive
+              to
+              company demands and client needs.
+            </div>
+            <div class="section-content">
+              We are competent in more than 100 support systems. Our technology being used can create not just a team
+              but an empire of professionals.
+            </div>
+            <div class="section-content">
+              RemotoDojo provides remotely unparalleled levels of actionable insights with tailored processes to suit
+              your needs.
+            </div>
+            <div>
+              <app-button text="Contact Us" size="sm" [routerLink]="routers.Contact">
+              </app-button>
+            </div>
+
+            <div class="pricing-graphic-mobile">
+              <swiper [config]="costBreakdownConfig" class="graphic-swiper">
+                <ng-template swiperSlide>
+                  <div>
+                    <img src="../../../assets/widgets/cost-breakdown-v2.png" alt="Cost Breakdown 1" class="mx-auto" />
+                  </div>
+                </ng-template>
+                <ng-template swiperSlide>
+                  <div class="shadow-lg">
+                    <img src="../../../assets/widgets/cost-breakdown-p2.png" alt="Cost Breakdown 2" class="mx-auto" />
+                  </div>
+                </ng-template>
+              </swiper>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="pricing-graphic">
+          <img src="../../../assets/widgets/cost-breakdown.png" alt="Cost Breakdown">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-4" [id]="fragment.ourWorks">
+    <!-- START OF PORTFOLIO SECTION -->
+    <div class="container mx-auto">
+      <div class="portfolio-desc text-center mb-10">
+        <div class="portfolio-title">
+          <h3>Portfolio</h3>
+        </div>
+        <div class="portfolio-subtitle px-4">
+          <h2>Check Out Our Works</h2>
+        </div>
+        <p class="portfolio-content text-base font-medium text-black  lg:text-xl lg:px-4 px-2">
+          {{ selectedPortfolio.description }}
+        </p>
+      </div>
+      <div class="hidden lg:block">
+        <div class="portfolio-clients">
+          <div *ngFor="let portfolios of selectedPortfolio.works">
+            <img [src]="portfolios.image" [alt]="portfolios.title" />
+          </div>
+        </div>
+      </div>
+      <div class="block lg:hidden">
+        <swiper [config]="portfolioConfig" class="graphic-swiper">
+          <ng-template swiperSlide *ngFor="let portfolios of selectedPortfolio.works">
+            <div>
+              <img [src]="portfolios.image" [alt]="portfolios.title" class="mx-auto" />
+            </div>
+          </ng-template>
+        </swiper>
+      </div>
+    </div>
+    <!-- END OF PORTFOLIO SECTION -->
+  </div>
+
+  <!-- START OF TESTIMONIALS SECTION -->
+  <div class="testimonials-outer-wrapper" [id]="fragment.testimonials">
+    <div class="testimonials-inner-wrapper">
+      <div class="testimonials-heading">
+        <div class="testimonials-header">
+          <h3>Testimonials</h3>
+        </div>
+        <div class="testimonials-subheader">
+          <h2>Read our Clients' Stories</h2>
+        </div>
+        <div class="testimonials-description">
+          We are proud of the testimonials given by our clients. We only provide the best service that each client
+          deserves.
+        </div>
+      </div>
+      <div class="testimonial-swiper-wrapper">
+        <div class="testimonials-featured-wrapper">
+          <div class="testimonials-featured">
+            <img src="./../../../assets/widgets/testimonial-icon.svg" class="testimonial-icon">
+            <img [src]="selectedTestimonials?.image" [class.hidden]="isTileLoading" (load)="isTileLoading = false"
+              class="rounded-full w-28 h-28 mx-auto text-center" />
+            <div class="space-y-4">
+              <div class="font-bold">
+                {{ hoveredTestimonials?.name || selectedTestimonials?.name }}
+              </div>
+              <div class="text-sm">
+                {{ hoveredTestimonials?.comment || selectedTestimonials?.comment }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonials-swiper-mobile">
+          <div class="swiper-card" *ngFor="let testimonial of testimonials">
+            <figure>
+              <div class="w-24 h-24 md:w-48 md:h-auto rounded-full mx-auto basis-1/4">
+                <img class="rounded-full" [src]="testimonial.image" [alt]="testimonial.name" />
+              </div>
+              <div class="space-y-4 basis-1/2">
+                <figcaption class="font-bold">
+                  {{ testimonial.name }}
+                </figcaption>
+                <blockquote class="text-sm">
+                  {{ testimonial.comment }}
+                </blockquote>
+              </div>
+            </figure>
+          </div>
+        </div>
+        <div class="testimonials-swiper">
+          <swiper [config]="testimonialsConfig">
+            <ng-template swiperSlide *ngFor="let testimonial of testimonials" class="swiper-card cursor-pointer">
+              <figure (click)="selectTestimonial(true, testimonial)">
+                <img class="w-24 h-24 flex-none rounded-full" [src]="testimonial.image" [alt]="testimonial.name" />
+                <div class="">
+                  <figcaption class="font-bold">
+                    {{ testimonial.name }}
+                  </figcaption>
+                  <blockquote class="text-sm">
+                    {{ testimonial.comment }}
+                  </blockquote>
+                </div>
+              </figure>
+            </ng-template>
+          </swiper>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END OF TESTIMONIALS SECTION -->
+
+  <!-- START OF COUNTRIES SECTION -->
+  <div class="countries-wrapper">
+    <div class="countries-inner-wrapper">
+      <div class="world-map">
+        <img src="./../../../assets/widgets/world-map-v4.svg" alt="" />
+        <!-- <div *ngFor="let loc of clients" [innerHTML]="loc.map | sanitize" [style]="loc.position" class="country"
+        (mouseover)="showMapTooltip($event, loc)"></div> -->
+      </div>
+
+      <div class="desc">
+        <div class="section-title">
+          <h3>Countries</h3>
+        </div>
+        <div class="section-desc text-4xl">
+          <h2>Areas We Serve</h2>
+        </div>
+        <div class="section-content text-base">
+          We are working remotely but we are connected with our clients from all corners of the globe. No need to
+          worry. We can deliver effectively and organize every project development anytime and anywhere.
+        </div>
+      </div>
+      <div class="countries-mobile">
+        <mat-accordion>
+          <mat-expansion-panel *ngFor="let client of clients" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title class="font-bold">
+                {{ client.name }}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <app-list-item *ngFor="let loc of client.locations" [data]="loc"></app-list-item>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </div>
+  </div>
+  <!-- END OF COUNTRIES SECTION -->

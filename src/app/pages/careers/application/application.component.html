@@ -1,0 +1,99 @@
+<div class="section" [id]="applyCareerFragment.form">
+  <div class="section-container col padded">
+    <div class="container">
+      <div class="application-desc">
+        <div class="landing-title">YOU ARE APPLYING FOR</div>
+        <div class="section-desc">{{ positionData.title }}</div>
+      </div>
+
+      <form [formGroup]="form" (ngSubmit)="submitApplication(form.value)">
+        <mat-form-field appearance="outline">
+          <mat-label>First Name *</mat-label>
+          <input type="text" matInput formControlName="firstName" />
+
+          <mat-error>First name is required.</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Last Name *</mat-label>
+          <input type="text" matInput formControlName="lastName" />
+
+          <mat-error>Last name is required.</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>E-mail Address *</mat-label>
+          <input type="text" matInput formControlName="email" />
+
+          <mat-error>E-mail address is required.</mat-error>
+        </mat-form-field>
+
+        <div class="grid grid-cols-3 gap-4">
+          <mat-form-field appearance="outline">
+            <mat-label>Country Code *</mat-label>
+            <mat-select formControlName="countryCode">
+              <mat-option *ngFor="let country of countriesData" [value]="country.dial_code">{{ country.code }} ({{
+                country.dial_code }})</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-span-2">
+            <mat-label>Phone *</mat-label>
+            <input matInput type="text" placeholder="Ex. 0999 999 9999" formControlName="contactNo" />
+
+            <mat-error>Contact number is required.</mat-error>
+          </mat-form-field>
+        </div>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Address *</mat-label>
+          <input type="text" matInput formControlName="address" />
+
+          <mat-error>Address is required.</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Country *</mat-label>
+          <mat-select class="font-Raleway" formControlName="country">
+            <mat-option *ngFor="let country of countriesData" [value]="country.name">{{ country.name }}</mat-option>
+          </mat-select>
+
+          <mat-error>Country is required.</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="col-span-2">
+          <mat-label>Where did you hear about this offer?</mat-label>
+          <mat-select class="font-Raleway" formControlName="offerHeard">
+            <mat-option *ngFor="let aboutOffer of heardAboutOffer" [value]="aboutOffer.value">{{ aboutOffer.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div class="col-span-2 text-xs text-gray-500">
+          Must be a supported file (.pdf, .docx, .doc) with size not any more
+          than 5MB. File name should contain applicant's full name & position
+          applied.
+          <br />
+          E.g. John Doe - Marketing Analytics Lead
+        </div>
+
+        <div class="actions">
+          <div class="upload-file">
+            <input type="file" [accept]="supportedExtensions" class="hidden" (change)="uploadFile($event)" #file
+              formControlName="fileResume" />
+
+            <app-button text="UPLOAD RESUME" type="primary" [isOutlined]="true" (btnClick)="file.click()"></app-button>
+            <div class="flex-auto w-full">{{ filename }}</div>
+          </div>
+
+          <app-button [isSubmit]="true" [isDisabled]="form.invalid" [isLoading]="loading" [isResponsive]="true">
+          </app-button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+</div>
+
+<app-alert-popup *ngIf="showAlert" [data]="alertData" (close)="closeAlertPopup()"></app-alert-popup>

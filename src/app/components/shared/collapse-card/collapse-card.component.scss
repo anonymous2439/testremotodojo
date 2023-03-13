@@ -1,0 +1,61 @@
+.transition {
+  @apply transform;
+  @apply duration-300;
+  @apply ease-in-out;
+}
+
+.collapse-card {
+  @apply px-5;
+  @apply text-sm;
+  background-color: #fff;
+  @apply text-black;
+  @apply cursor-pointer;
+  @apply rounded-md;
+
+  @extend .transition;
+
+  @apply w-full;
+
+  .title {
+    @apply h-14;
+    @apply flex;
+    @apply items-center;
+    @apply justify-between;
+    @apply font-bold;
+
+    & > img,
+    span {
+      @extend .transition;
+    }
+  }
+
+  .content {
+    @apply overflow-hidden;
+    @apply leading-loose;
+    @apply max-h-0;
+    @apply whitespace-pre-line;
+
+    @extend .transition;
+
+    font-family: "Raleway";
+  }
+}
+
+.collapsed {
+  @apply pb-4;
+
+  .title {
+    & > span {
+      @apply text-primary;
+    }
+
+    & > img {
+      @apply rotate-45;
+    }
+  }
+
+  .content {
+    @apply max-h-96;
+    @apply hover:overflow-auto;
+  }
+}

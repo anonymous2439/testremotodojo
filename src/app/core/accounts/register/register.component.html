@@ -1,0 +1,111 @@
+<div class="section first-section accounts-first-section">
+  <div class="section-1-wrapper">
+    <div class="section-container section-1 space-y-6">
+      <div class="account-title">Register</div>
+      <div class="account-subtitle">Get More From Us</div>
+      <div class="account-desc">
+        Get more a lot of tips and ideas on making your business more progressive and successful. By joining us to gain
+        more access!
+      </div>
+    </div>
+  </div>
+  <div class="section-2-wrapper">
+    <div class="section-container section-2">
+      <div class="section-content">
+        <div class="login-container">
+          <div class="login-content">
+            <div class="login-tell-us">
+              <p>Already have an account?</p>
+            </div>
+            <div class="login-btn">
+              <app-button type="primary" text="LOGIN" [isResponsive]="true"
+                [routerLink]="routers.Accounts + routers.Login">
+              </app-button>
+            </div>
+          </div>
+        </div>
+
+        <div class="register-container">
+          <div class="form-title">Get your access today!</div>
+
+          <form [formGroup]="registerForm" (ngSubmit)="register(registerForm.value)">
+            <div class="grid grid-cols-2 gap-4">
+              <mat-form-field appearance="outline">
+                <mat-label class="text-base">First Name *</mat-label>
+                <input matInput formControlName="firstName" />
+
+                <mat-error>First name is required.</mat-error>
+              </mat-form-field>
+
+              <mat-form-field appearance="outline">
+                <mat-label class="text-base">Last Name *</mat-label>
+                <input matInput formControlName="lastName" />
+
+                <mat-error>Last name is required.</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="grid grid-cols-3 gap-4">
+              <mat-form-field appearance="outline">
+                <mat-label class="text-base">Country Code *</mat-label>
+                <mat-select class="text-base" formControlName="countryCode">
+                  <mat-option *ngFor="let country of countriesData" [value]="country.dial_code">
+                    {{ country.code }} ({{
+                    country.dial_code }})
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field class="col-span-2" appearance="outline">
+                <mat-label class="text-base">Phone *</mat-label>
+                <input matInput type="text" placeholder="Ex. 0999 999 9999" formControlName="contactNo" />
+
+                <mat-error>Contact number is required.</mat-error>
+              </mat-form-field>
+            </div>
+
+            <mat-form-field appearance="outline">
+              <mat-label class="text-base">E-mail Address *</mat-label>
+              <input matInput formControlName="email" />
+
+              <mat-error>E-mail is required.</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label class="text-base">Company Name</mat-label>
+              <input matInput formControlName="companyName" />
+
+              <mat-error>Name of company is required.</mat-error>
+            </mat-form-field>
+
+            <div class="flex flex-col">
+              <div class="flex items-center space-x-2">
+                <mat-checkbox color="primary" class="text-xs" formControlName="iPolicy">
+                </mat-checkbox>
+
+                <span class="text-xs">
+                  I have read and agree to the
+                  <span class="text-primary cursor-pointer" [routerLink]="routers.Privacy">Privacy Policy</span>
+                </span>
+              </div>
+
+              <div class="flex items-center space-x-2 mt-2">
+                <mat-checkbox color="primary" class="text-xs" formControlName="iNews">
+                </mat-checkbox>
+
+                <span class="text-xs"> Subscribe to our DOJI Newsletter </span>
+              </div>
+            </div>
+
+            <div class="flex justify-center w-full mt-4">
+              <app-button [isSubmit]="true" [isDisabled]="registerForm.invalid" [isLoading]="loading"
+                [isResponsive]="true"></app-button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-alert-popup *ngIf="showSuccessAlert" [data]="successAlert" (close)="closeAlertPopup()"></app-alert-popup>

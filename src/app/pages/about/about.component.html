@@ -1,0 +1,178 @@
+<div class="section first-section section-1" [id]="fragment.whoWeAre">
+  <div class="section-container">
+    <div class="grid grid-cols-1 lg:grid-cols-2 items-center px-4 gap-10">
+      <div class="landing space-y-6">
+        <div class="about-section-subtitle">
+          <h2>{{ aboutSections[0]?.name }}</h2>
+        </div>
+        <div class="about-section-title">
+          <h1>{{ aboutSections[0]?.description1 }}</h1>
+        </div>
+        <div class="about-section-desc">{{ aboutSections[0]?.text }}</div>
+        <div class="about-section-desc">{{ aboutSections[0]?.text2 }}</div>
+        <div class="about-section-desc">{{ aboutSections[0]?.text3 }}</div>
+      </div>
+      <div class="landing-featured-img">
+        <img src="../../../assets/banners/about-banner-v4.svg" alt="About Banner" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section section-2" [id]="fragment.about">
+  <div class="max-w-screen-xl mx-auto px-4 statistics cards-container">
+    <div *ngFor="let benefit of statistics" class="card-items">
+      <h3 class="text-primary2 font-bold text-2xl">
+        {{ benefit.count }} {{ benefit.name }}
+      </h3>
+      <p class="text-black text-sm">
+        {{ benefit.description }}
+    </div>
+  </div>
+</div>
+
+<div class="section section-4 px-4" [id]="fragment.brochure">
+  <div class="section-container grid grid-cols-1 lg:grid-cols-2 items-center justify-items-center gap-40">
+    <div class="brochure-graphic">
+      <img [src]="aboutSections[3]?.img" alt="" />
+    </div>
+    <div class="brochure-desc">
+      <h3>
+        <p class="about-section-subtitle">{{ aboutSections[3]?.name }}</p>
+      </h3>
+      <h2>
+        <p class="about-section-title">{{ aboutSections[3]?.description }}</p>
+      </h2>
+      <p class="about-section-desc">{{ aboutSections[3]?.text1 }}</p>
+      <div class="spacer-2"></div>
+      <app-button text="{{ aboutSections[3]?.cta?.label }}" [isResponsive]="true" (btnClick)="downloadBrochure()">
+      </app-button>
+    </div>
+  </div>
+</div>
+
+<div class="section section-no-gap section-5">
+  <div class="section-container padded">
+    <div class="questions-img">
+      <img src="../../../assets/banners/careers-featured-v4.svg" alt="">
+    </div>
+    <div class="content">
+      <div class="text">
+        <h2>Do you wanna join our team?</h2>
+        <div>
+          RemotoDojo needs professionals and we can make you a professional! By joining our team we can guarantee you
+          the best way for your future.
+        </div>
+      </div>
+      <app-button text="Join our Team!" size="sm" [isResponsive]="true" [routerLink]="routers.Careers" type="basic">
+      </app-button>
+    </div>
+  </div>
+</div>
+
+<!-- <div id="careers-section" class="careers-section">
+  <div class="careers-inner-wrapper">
+
+  </div>
+</div> -->
+
+<div class="section section-6 px-4" [id]="fragment.bosses">
+  <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center pb-20 gap-10">
+    <div class="boss-featured order-2 md:order-1">
+      <img class="boss-featured-img" src="./../../../assets/staff/leon.webp" alt="" width="400">
+      <div class="mt-6 text-center">
+        <p class="mb-0 text-2xl font-semibold">
+          Leon Fedro
+        </p>
+        <p class="text-base text-primary2 font-medium">
+          Chief Executive Officer & President
+        </p>
+      </div>
+    </div>
+    <div class="boss-desc order-1 md:order-2 space-y-6">
+      <h3>
+        <p class="about-section-subtitle">{{ aboutSections[5]?.name }}</p>
+      </h3>
+      <h2>
+        <p class="about-section-title">{{ aboutSections[5]?.description }}</p>
+      </h2>
+      <p class="about-section-desc">{{ aboutSections[5]?.text }}</p>
+    </div>
+  </div>
+
+  <div class="max-w-screen-xl mx-auto staff-list">
+    <div *ngFor=" let staff of aboutSections[5]?.bosses">
+      <app-staff-card [employeeId]="staff" [role]="'boss'"></app-staff-card>
+    </div>
+  </div>
+</div>
+
+<div class="section-7 py-10 lg:py-20" [id]="fragment.staff">
+  <div class="max-w-screen-xl mx-auto section-container px-5 padded">
+    <div class="about-section-subtitle mb-6">
+      <h3>{{ aboutSections[6]?.name }}</h3>
+    </div>
+    <div class="about-section-title">
+      <h2>{{ aboutSections[6]?.description3 }}</h2>
+    </div>
+
+    <div class="staff-container">
+      <div class="staff-list">
+        <app-staff-card *ngFor="let leaders of aboutSections[6]?.leaders" [employeeId]="leaders" [role]="'leaders'">
+        </app-staff-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-white">
+  <div class="max-w-screen-xl mx-auto section-7 px-5 py-10 lg:py-20" [id]="fragment.staff">
+    <div class="section-container padded">
+      <div class="about-section-title">
+        <h2>{{ aboutSections[6]?.description2 }}</h2>
+      </div>
+
+      <div class="staff-container">
+        <div class="staff-list">
+          <app-staff-card *ngFor="let sales of aboutSections[6]?.sales" [employeeId]="sales" [role]="'sales'">
+          </app-staff-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-white pb-10 lg:pb-40">
+  <div class="max-w-screen-xl mx-auto section-7 px-5" [id]="fragment.staff">
+    <div class="section-container padded">
+      <div class="about-section-title">
+        <h2>{{ aboutSections[6]?.description }}</h2>
+      </div>
+
+      <div class="staff-container">
+        <div class="staff-list">
+          <app-staff-card *ngFor="let staff of aboutSections[6]?.staff" [employeeId]="staff" [role]="'staff'">
+          </app-staff-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section section-no-gap section-5">
+  <div class="section-container padded">
+    <div class="content">
+      <div class="text">
+        <h2>{{ aboutSections[4]?.text1 }}</h2>
+        <div>
+          {{ aboutSections[4]?.text2 }}
+        </div>
+      </div>
+      <app-button text="{{ aboutSections[4]?.cta?.label }}" [routerLink]="aboutSections[4].cta?.action"
+        [fragment]="aboutSections[4].cta?.fragment" type="basic"></app-button>
+    </div>
+    <div class="questions-img">
+      <img src="../../../assets/banners/got-more-questions-featured-v2.png" alt="">
+    </div>
+  </div>
+</div>

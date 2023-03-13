@@ -1,0 +1,8 @@
+<div class="position-card" (click)="viewDetails()">
+  <span class="position-title">{{position.title}}</span>
+  <div class="position-description">
+    <span class="position-time-status">{{position.timeStatus}}</span> |
+    <span class="location">{{position.locations.join(', ')}}</span>
+  </div>
+  <button (click)="viewDetails()">View Details >></button>
+</div>

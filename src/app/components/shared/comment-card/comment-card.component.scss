@@ -1,0 +1,20 @@
+.card {
+  @apply flex;
+  @apply flex-col;
+  @apply p-6;
+  @apply gap-4;
+  @apply text-sm;
+  @apply leading-loose;
+  @apply rounded-lg;
+  @apply shadow-xl;
+}
+
+.avatar {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply rounded-full;
+  @apply w-14;
+  @apply h-14;
+  @apply bg-primary-faded;
+}
